@@ -1,0 +1,156 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Button from "../components/Button.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import SectionShell from "../components/SectionShell.astro";
+import HeroAccent from "../components/svg/HeroAccent.astro";
+import FAQItem from "../components/FAQItem.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import Icon from "../components/svg/Icon.astro";
+import FinalCTA from "../components/sections/FinalCTA.astro";
+
+export interface Capability {
+  title: string;
+  body: string;
+}
+
+export interface Testimonial {
+  quote: string;
+  name: string;
+  role?: string;
+  firm?: string;
+}
+
+export interface Faq {
+  q: string;
+  a: string;
+}
+
+export interface ICPPage {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  hero: {
+    headline: string;
+    subhead: string;
+  };
+  pain: string[];
+  whatHeadline: string;
+  what: Capability[];
+  outcomes: string[];
+  testimonial?: Testimonial;
+  faqs: Faq[];
+  finalCta: {
+    headline: string;
+  };
+}
+
+interface Props {
+  page: ICPPage;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={`${page.title} — FastTrackr AI`} description={page.description ?? page.hero.subhead}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-bg-primary">
+    <HeroAccent class="absolute -top-32 -right-40 w-[640px] h-[640px] hidden md:block" />
+    <div class="container-site relative pt-20 md:pt-28 pb-16 md:pb-24">
+      <div class="max-w-[860px]">
+        <Eyebrow>{page.eyebrow}</Eyebrow>
+        <h1 class="mt-2 text-h1 text-text-primary">{page.hero.headline}</h1>
+        <p class="mt-6 text-body-lg text-text-secondary max-w-[680px]">
+          {page.hero.subhead}
+        </p>
+        <div class="mt-10">
+          <Button href="/contact" variant="primary">Book a Demo</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The pain -->
+  <SectionShell bg="secondary" ariaLabelledby="pain-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">The pain</p>
+      <h2 id="pain-heading" class="sr-only">The pain</h2>
+      <div class="mt-3 space-y-5 text-body-lg text-text-primary">
+        {page.pain.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </SectionShell>
+
+  <!-- What FastTrackr does -->
+  <SectionShell bg="primary" ariaLabelledby="what-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">What FastTrackr does</p>
+      <h2 id="what-heading" class="mt-3 text-h2 text-text-primary">{page.whatHeadline}</h2>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      {
+        page.what.map((c) => (
+          <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+            <div class="text-brand-green mb-4">
+              <Icon name="check" size={24} strokeWidth={2} />
+            </div>
+            <h3 class="text-h4 text-text-primary">{c.title}</h3>
+            <p class="mt-3 text-body text-text-secondary">{c.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </SectionShell>
+
+  <!-- Outcomes -->
+  <SectionShell bg="secondary" ariaLabelledby="outcomes-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Outcomes</p>
+      <h2 id="outcomes-heading" class="sr-only">Outcomes</h2>
+    </div>
+    <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+      {
+        page.outcomes.map((o) => (
+          <li class="flex items-start gap-3 bg-bg-primary border border-border-subtle rounded-[12px] p-5">
+            <span class="shrink-0 text-brand-green mt-0.5">
+              <Icon name="check" size={20} strokeWidth={2.25} />
+            </span>
+            <span class="text-body text-text-primary" set:html={o} />
+          </li>
+        ))
+      }
+    </ul>
+  </SectionShell>
+
+  <!-- Testimonial -->
+  {page.testimonial && (
+    <SectionShell bg="primary" density="md" ariaLabelledby="quote-heading">
+      <h2 id="quote-heading" class="sr-only">How firms are using us today</h2>
+      <div class="max-w-[860px] mx-auto">
+        <TestimonialCard
+          variant="featured"
+          quote={page.testimonial.quote}
+          name={page.testimonial.name}
+          role={page.testimonial.role ?? "Customer"}
+          firm={page.testimonial.firm}
+        />
+      </div>
+    </SectionShell>
+  )}
+
+  <!-- FAQ -->
+  <SectionShell bg="secondary" density="md" containerClass="max-w-[820px] mx-auto" ariaLabelledby="faq-heading">
+    <div>
+      <p class="text-eyebrow text-brand-green">FAQ</p>
+      <h2 id="faq-heading" class="mt-3 text-h2 text-text-primary">Questions, answered.</h2>
+    </div>
+    <div class="mt-10">
+      {page.faqs.map((f) => (
+        <FAQItem question={f.q}>{f.a}</FAQItem>
+      ))}
+    </div>
+  </SectionShell>
+
+  <FinalCTA headline={page.finalCta.headline} />
+</BaseLayout>

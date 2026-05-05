@@ -1,0 +1,19 @@
+---
+/*
+ * Vertical dotted connector for §5 How It Works. Renders absolutely-positioned
+ * inside a step list — parent should be `position: relative`.
+ *
+ * The line is built from a CSS gradient rather than SVG so it stretches
+ * fluidly with the parent height and animates cheaply.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<span
+  aria-hidden="true"
+  class={`pointer-events-none absolute top-2 bottom-2 w-px bg-[radial-gradient(circle,var(--color-border-strong)_1px,transparent_1.5px)] [background-size:1px_8px] [background-repeat:repeat-y] ${className}`}
+></span>

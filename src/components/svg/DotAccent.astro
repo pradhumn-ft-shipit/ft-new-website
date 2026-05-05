@@ -1,0 +1,32 @@
+---
+/*
+ * Tiny visual accent — short colored bar (4×32) per 06-visuals §3 pain card,
+ * or single dot for §4 dividers. Chooses by `kind` prop.
+ */
+type Kind = "bar" | "dot";
+
+interface Props {
+  kind?: Kind;
+  tone?: "muted" | "brand";
+  class?: string;
+}
+
+const { kind = "bar", tone = "muted", class: className = "" } = Astro.props;
+const color = tone === "brand" ? "var(--color-brand-green)" : "var(--color-text-muted)";
+---
+
+{
+  kind === "bar" ? (
+    <span
+      aria-hidden="true"
+      class={`block w-1 h-8 rounded-full ${className}`}
+      style={`background:${color}`}
+    />
+  ) : (
+    <span
+      aria-hidden="true"
+      class={`block w-1.5 h-1.5 rounded-full ${className}`}
+      style={`background:${color}`}
+    />
+  )
+}

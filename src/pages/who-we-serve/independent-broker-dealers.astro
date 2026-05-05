@@ -1,0 +1,68 @@
+---
+import ICPLayout, { type ICPPage } from "../../layouts/ICPLayout.astro";
+
+const page: ICPPage = {
+  eyebrow: "For Independent Broker-Dealers",
+  title: "For Independent Broker-Dealers",
+  hero: {
+    headline: "Win the advisors. Win their books. Win them faster.",
+    subhead:
+      "Your transition experience is part of your recruiting pitch. Make it the part that closes the deal.",
+  },
+  pain: [
+    "The top advisors you're recruiting are talking to three other firms. Comp packages are close. Platform stories are close. Tech stacks are close.",
+    "Then they ask the question that actually decides it: what does the move look like?",
+    "Today, that's where most BDs lose. Repapering takes months. Forms come back NIGO. Advisors get pulled into operational work that has nothing to do with what they signed up for. Their teams burn out before they're even fully on your platform. Some take less money to go somewhere the move feels easier.",
+    "The transition experience isn't a back-office concern. It's a recruiting weapon — and right now, most firms aren't using it.",
+  ],
+  whatHeadline:
+    "We make the transition into your firm the easiest in the industry — and we make it visible to the advisors you're recruiting.",
+  what: [
+    {
+      title: "A purpose-built onboarding workflow for incoming advisors.",
+      body: "Pre-filled forms. Validated submissions. End-to-end visibility.",
+    },
+    {
+      title: "Faster path to advisor productivity.",
+      body: "Less time on operational work means more time generating revenue at your firm.",
+    },
+    {
+      title: "Differentiation in the recruiting pitch.",
+      body: "\"Here's how the move actually looks\" becomes a slide you want to show, not one you skip.",
+    },
+    {
+      title: "Lower load on your transition team.",
+      body: "Your in-house transition staff handles judgment work, not data entry.",
+    },
+  ],
+  outcomes: [
+    "<strong>Better recruiting outcomes</strong> — close more advisors against firms with rougher onboarding",
+    "<strong>Faster ramp</strong> — incoming advisors generate revenue sooner",
+    "<strong>Less recruiter time on logistics</strong> — recruiters recruit, ops handles ops",
+    "<strong>Higher advisor satisfaction in year one</strong> — the experience starts well, and that sticks",
+  ],
+  faqs: [
+    {
+      q: "Can we white-label this for advisors joining our firm?",
+      a: "Yes. The experience can be branded as part of your firm's onboarding.",
+    },
+    {
+      q: "How does this integrate with our home office systems?",
+      a: "We integrate with common CRMs, e-signature platforms, and the custodial relationships you already have. Setup is a matter of configuration, not platform replacement.",
+    },
+    {
+      q: "What about advisors with complex book structures — multi-custodian, mixed registered/non-registered, equity comp, etc.?",
+      a: "Built for it. The system was designed by people who've moved exactly these books.",
+    },
+    {
+      q: "How does pricing work for BDs?",
+      a: "Enterprise pricing tied to advisor volume and transition outcomes. Talk to us about your roadmap and we'll work it through.",
+    },
+  ],
+  finalCta: {
+    headline: "Make your transition experience the reason advisors say yes.",
+  },
+};
+---
+
+<ICPLayout page={page} />

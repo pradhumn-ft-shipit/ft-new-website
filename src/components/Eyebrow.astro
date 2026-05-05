@@ -1,0 +1,20 @@
+---
+/*
+ * Reusable eyebrow tag — 13px uppercase, brand-green by default. Used above
+ * section headlines (06-visuals §1.2).
+ */
+interface Props {
+  tone?: "brand" | "muted";
+  class?: string;
+}
+
+const { tone = "brand", class: className = "" } = Astro.props;
+const tones = {
+  brand: "text-brand-green",
+  muted: "text-text-muted",
+};
+---
+
+<p class={`text-eyebrow ${tones[tone]} ${className}`}>
+  <slot />
+</p>

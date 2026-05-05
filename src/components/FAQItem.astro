@@ -1,0 +1,37 @@
+---
+/*
+ * Accordion FAQ row per 06-visuals §11. Native <details> for accessibility +
+ * graceful no-JS fallback. The +/− toggle is built from two 2×20 bars; the
+ * vertical bar fades out when the row is open.
+ */
+interface Props {
+  question: string;
+  open?: boolean;
+  class?: string;
+}
+
+const { question, open = false, class: className = "" } = Astro.props;
+---
+
+<details
+  class={`group/faq border-b border-border-subtle ${className}`}
+  {...(open ? { open: true } : {})}
+>
+  <summary
+    class="flex items-center justify-between gap-4 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+  >
+    <span class="text-body-lg font-semibold text-text-primary">{question}</span>
+    <span
+      aria-hidden="true"
+      class="relative shrink-0 inline-block w-5 h-5 text-text-secondary"
+    >
+      <span class="absolute inset-x-0 top-1/2 h-[2px] -translate-y-1/2 bg-current"></span>
+      <span
+        class="absolute inset-y-0 left-1/2 w-[2px] -translate-x-1/2 bg-current transition-opacity duration-200 group-open/faq:opacity-0"
+      ></span>
+    </span>
+  </summary>
+  <div class="pb-6 pr-10 text-body text-text-secondary">
+    <slot />
+  </div>
+</details>

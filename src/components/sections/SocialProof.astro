@@ -1,0 +1,35 @@
+---
+/*
+ * §2 Social proof bar. Logos must be cleared before going live — until they
+ * are, this renders as text placeholders so we don't ship an empty grid or
+ * fake brands. CMS will populate the real list.
+ *
+ * Copy: "Shaped by advisors and operators at" — verbatim from
+ * guideline-copy/02-homepage.md §2.
+ */
+
+const placeholders = [
+  "Logo One",
+  "Logo Two",
+  "Logo Three",
+  "Logo Four",
+  "Logo Five",
+  "Logo Six",
+];
+---
+
+<section class="bg-bg-secondary section-y-sm">
+  <div class="container-site text-center">
+    <p class="text-eyebrow text-text-muted">Shaped by advisors and operators at</p>
+    <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-6 items-center justify-items-center">
+      {
+        placeholders.map((name) => (
+          <li
+            aria-hidden="true"
+            class="text-body-sm font-semibold tracking-wide text-text-muted opacity-70 select-none"
+          >{name}</li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

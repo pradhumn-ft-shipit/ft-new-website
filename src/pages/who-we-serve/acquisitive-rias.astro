@@ -1,0 +1,67 @@
+---
+import ICPLayout, { type ICPPage } from "../../layouts/ICPLayout.astro";
+
+const page: ICPPage = {
+  eyebrow: "For Acquisitive RIAs",
+  title: "For Acquisitive RIAs",
+  hero: {
+    headline: "Every acquisition is a repapering project. Make it your edge.",
+    subhead:
+      "M&A is your growth strategy. Stop letting the integration timeline drag your AUM and your returns down with it.",
+  },
+  pain: [
+    "You closed the deal. The hard part was supposed to be over.",
+    "Then comes the integration. Months of repapering. Asset attrition during the silence between \"we acquired them\" and \"they're fully on our platform.\" Your ops team in firefighting mode. Your CFO watching AUM bleed out and asking why the projected synergies aren't showing up yet.",
+    "By the time the last account is moved, the next acquisition is already in motion. The team that's burned out from this one is the team that has to do the next one.",
+  ],
+  whatHeadline:
+    "We turn integration from a months-long ops project into a repeatable, weeks-long process.",
+  what: [
+    {
+      title: "Each acquisition runs through the same engine.",
+      body: "Data collection, mapping, form-filling, project management — standardized across deals. The first one is the slowest. Every one after is faster.",
+    },
+    {
+      title: "AUM is protected during the transition window.",
+      body: "Faster moves mean less time for clients to wonder, drift, or leave.",
+    },
+    {
+      title: "Your ops team scales without growing.",
+      body: "The system absorbs the volume. They focus on the judgment calls.",
+    },
+    {
+      title: "Multi-deal pipelines stay visible.",
+      body: "Three acquisitions running at once? You see the status of every household, every account, in one place.",
+    },
+  ],
+  outcomes: [
+    "<strong>Integration timelines cut dramatically</strong> — months to weeks",
+    "<strong>Less AUM lost during the move</strong> — protect what you paid for",
+    "<strong>Faster path to deal-level revenue</strong> — synergies show up sooner",
+    "<strong>More deals per year</strong> — ops capacity stops being the bottleneck",
+  ],
+  faqs: [
+    {
+      q: "Can you handle multi-deal pipelines?",
+      a: "Yes. Each acquisition is its own workspace inside FastTrackr. Your team sees them all in one view.",
+    },
+    {
+      q: "How does this fit with our internal integration playbook?",
+      a: "We don't replace the playbook — we run on top of it. Your sequencing, your communication templates, your client experience standards stay yours. We handle the operational layer underneath.",
+    },
+    {
+      q: "What's the ROI math?",
+      a: "Usually two-fold: time saved by your ops team plus AUM protected during the transition window. We'll model it for your specific deal flow on a call.",
+    },
+    {
+      q: "Do you support sub-acquisition complexity — multi-custodian moves, partial book lifts, advisor-level breakaways inside a deal?",
+      a: "Yes. The system was designed for the variations.",
+    },
+  ],
+  finalCta: {
+    headline: "Make integration your competitive advantage.",
+  },
+};
+---
+
+<ICPLayout page={page} />

@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Button from "../components/Button.astro";
+import HeroAccent from "../components/svg/HeroAccent.astro";
+import Icon from "../components/svg/Icon.astro";
+
+const status = Astro.url.searchParams.get("status");
+const failedFields = (Astro.url.searchParams.get("fields") || "").split(",").filter(Boolean);
+const fieldFailed = (name: string) => failedFields.includes(name);
+---
+
+<BaseLayout
+  title="Book a Demo — FastTrackr AI"
+  description="Tell us about your firm. A 20-minute walkthrough is enough to see if FastTrackr fits your book."
+>
+  <section class="relative overflow-hidden bg-bg-primary">
+    <HeroAccent class="absolute -top-32 -right-40 w-[640px] h-[640px] hidden md:block" />
+    <div class="container-site relative pt-20 md:pt-28 pb-20 md:pb-28">
+      <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+        <div class="lg:col-span-2">
+          <Eyebrow>Book a Demo</Eyebrow>
+          <h1 class="mt-2 text-h1 text-text-primary">
+            Let's see if FastTrackr fits your book.
+          </h1>
+          <p class="mt-6 text-body-lg text-text-secondary">
+            A 20-minute walkthrough. We'll show you how a transition would
+            actually run for your firm — your custodians, your forms, your edges.
+          </p>
+          <ul class="mt-8 space-y-3 text-body text-text-secondary">
+            <li class="flex items-start gap-3">
+              <span class="text-brand-green mt-0.5"><Icon name="check" size={20} strokeWidth={2.25} /></span>
+              No prep required.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand-green mt-0.5"><Icon name="check" size={20} strokeWidth={2.25} /></span>
+              Senior team on the call.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand-green mt-0.5"><Icon name="check" size={20} strokeWidth={2.25} /></span>
+              You'll leave with a concrete go/no-go.
+            </li>
+          </ul>
+          <p class="mt-10 text-body-sm text-text-muted">
+            Prefer email?
+            <a class="underline hover:text-text-primary" href="mailto:vineet@fasttrackr.ai">vineet@fasttrackr.ai</a>
+          </p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+            {status === "success" ? (
+              <div role="status" aria-live="polite" class="text-center py-10">
+                <div class="mx-auto w-12 h-12 rounded-full bg-bg-tint border border-brand-green flex items-center justify-center text-brand-green">
+                  <Icon name="check" size={24} strokeWidth={2.25} />
+                </div>
+                <h2 class="mt-5 text-h3 text-text-primary">Thanks — we'll be in touch.</h2>
+                <p class="mt-3 text-body text-text-secondary">
+                  Someone from our team will reach out within one business day to
+                  schedule your walkthrough.
+                </p>
+                <p class="mt-6">
+                  <Button href="/" variant="secondary">Back to home →</Button>
+                </p>
+              </div>
+            ) : (
+              <form action="/api/demo" method="post" novalidate class="space-y-5">
+                {status === "error" && (
+                  <div role="alert" class="rounded-md border border-border-strong bg-bg-secondary p-4 text-body-sm text-text-primary">
+                    We couldn't process that submission. Check the highlighted
+                    fields below, or email
+                    <a class="underline" href="mailto:vineet@fasttrackr.ai">vineet@fasttrackr.ai</a>.
+                  </div>
+                )}
+
+                <div>
+                  <label for="name" class="block text-body-sm font-semibold text-text-primary">
+                    Your name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    autocomplete="name"
+                    aria-invalid={fieldFailed("name") ? "true" : undefined}
+                    class={`mt-2 w-full rounded-md border bg-bg-primary px-4 py-3 text-body text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-green ${
+                      fieldFailed("name") ? "border-button-hover" : "border-border-strong"
+                    }`}
+                  />
+                </div>
+
+                <div>
+                  <label for="email" class="block text-body-sm font-semibold text-text-primary">
+                    Work email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    aria-invalid={fieldFailed("email") ? "true" : undefined}
+                    class={`mt-2 w-full rounded-md border bg-bg-primary px-4 py-3 text-body text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-green ${
+                      fieldFailed("email") ? "border-button-hover" : "border-border-strong"
+                    }`}
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label for="firm" class="block text-body-sm font-semibold text-text-primary">
+                      Firm
+                    </label>
+                    <input
+                      id="firm"
+                      name="firm"
+                      type="text"
+                      autocomplete="organization"
+                      class="mt-2 w-full rounded-md border border-border-strong bg-bg-primary px-4 py-3 text-body text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-green"
+                    />
+                  </div>
+                  <div>
+                    <label for="role" class="block text-body-sm font-semibold text-text-primary">
+                      Your role
+                    </label>
+                    <input
+                      id="role"
+                      name="role"
+                      type="text"
+                      autocomplete="organization-title"
+                      class="mt-2 w-full rounded-md border border-border-strong bg-bg-primary px-4 py-3 text-body text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-green"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-body-sm font-semibold text-text-primary">
+                    What's your situation?
+                    <span class="font-normal text-text-muted">(optional)</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="mt-2 w-full rounded-md border border-border-strong bg-bg-primary px-4 py-3 text-body text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-green"
+                  ></textarea>
+                </div>
+
+                {/* Honeypot — hidden from humans, attractive to bots */}
+                <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                  <label>
+                    Website (leave blank)
+                    <input name="website" type="text" tabindex="-1" autocomplete="off" />
+                  </label>
+                </div>
+
+                <div class="pt-2">
+                  <Button type="submit" variant="primary" class="w-full md:w-auto">
+                    Book a Demo
+                  </Button>
+                </div>
+
+                <p class="text-body-sm text-text-muted">
+                  By submitting, you agree to our
+                  <a class="underline hover:text-text-primary" href="/privacy-policy">Privacy Policy</a>.
+                </p>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

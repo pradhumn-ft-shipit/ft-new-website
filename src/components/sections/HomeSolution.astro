@@ -1,0 +1,58 @@
+---
+import SectionShell from "../SectionShell.astro";
+import Icon from "../svg/Icon.astro";
+
+const blocks = [
+  {
+    icon: "clipboard" as const,
+    title: "Data Collection",
+    body: "AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review — without another intake form.",
+  },
+  {
+    icon: "document" as const,
+    title: "Documentation",
+    body: "Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. No more manual cross-referencing.",
+  },
+  {
+    icon: "kanban" as const,
+    title: "Project Management",
+    body: "Hundreds of households, every form, every status — visible in one place. No more spreadsheets, no more blind handoffs.",
+  },
+];
+---
+
+<SectionShell bg="secondary" ariaLabelledby="solution-heading">
+  <div class="text-center max-w-[820px] mx-auto">
+    <p class="text-eyebrow text-brand-green">What we built</p>
+    <h2 id="solution-heading" class="mt-3 text-h2 text-text-primary">
+      Built for transition. Not retrofitted with it.
+    </h2>
+    <div class="mt-5 space-y-4 text-body-lg text-text-secondary max-w-[700px] mx-auto">
+      <p>
+        Most tools that mention transitions added a feature. We built the
+        company around it. FastTrackr is shaped by transition consultants,
+        ops leaders, and RIA founders who've moved billions in client assets
+        — and we've encoded what they know into a system that handles the
+        work, the quirks, and the edge cases that generic tools miss.
+      </p>
+      <p>
+        Every transition is different. We get that. The system flexes around
+        your book — not the other way around.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-16 grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-border-subtle">
+    {
+      blocks.map((b) => (
+        <div class="px-0 md:px-8 first:md:pl-0 last:md:pr-0 py-6 md:py-0">
+          <div class="text-brand-green">
+            <Icon name={b.icon} size={32} strokeWidth={1.75} />
+          </div>
+          <h3 class="mt-4 text-h3 text-text-primary">{b.title}</h3>
+          <p class="mt-3 text-body text-text-secondary">{b.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionShell>

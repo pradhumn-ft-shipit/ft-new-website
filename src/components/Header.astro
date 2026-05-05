@@ -1,0 +1,219 @@
+---
+import Logo from "./svg/Logo.astro";
+import IconChevronDown from "./svg/IconChevronDown.astro";
+import IconMenu from "./svg/IconMenu.astro";
+import IconClose from "./svg/IconClose.astro";
+import Button from "./Button.astro";
+
+type NavItem =
+  | { label: string; href: string }
+  | { label: string; children: { label: string; href: string }[] };
+
+const nav: NavItem[] = [
+  {
+    label: "Solutions",
+    children: [
+      { label: "Advisor Transitions", href: "/solutions/advisor-transitions" },
+      { label: "Client Onboarding", href: "/solutions/client-onboarding" },
+      { label: "Meeting Assistant", href: "/solutions/meeting-assistant" },
+      { label: "Document Intelligence", href: "/solutions/document-intelligence" },
+    ],
+  },
+  {
+    label: "Who We Serve",
+    children: [
+      { label: "For Transition Consultants", href: "/who-we-serve/transition-consultants" },
+      { label: "For Breakaway Advisors", href: "/who-we-serve/breakaway-advisors" },
+      { label: "For Acquisitive RIAs", href: "/who-we-serve/acquisitive-rias" },
+      { label: "For Independent Broker-Dealers", href: "/who-we-serve/independent-broker-dealers" },
+      { label: "For Custodians", href: "/who-we-serve/custodians" },
+    ],
+  },
+  {
+    label: "Resources",
+    children: [
+      { label: "Blog", href: "/blog" },
+      { label: "Advisor Ally Podcast", href: "/podcast" },
+    ],
+  },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-40 bg-bg-primary transition-shadow duration-200 data-[scrolled=true]:border-b data-[scrolled=true]:border-border-subtle data-[scrolled=true]:shadow-[0_1px_3px_rgba(15,23,42,0.04)]"
+>
+  <div class="container-site flex items-center justify-between h-16 md:h-[72px]">
+    <!-- Logo -->
+    <a href="/" class="flex items-center" aria-label="FastTrackr AI — Home">
+      <Logo height={26} />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+      {
+        nav.map((item) =>
+          "children" in item ? (
+            <div class="group relative">
+              <button
+                type="button"
+                class="flex items-center gap-1 px-3 py-2 text-[15px] font-medium text-text-primary hover:text-button-primary"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                {item.label}
+                <IconChevronDown size={14} class="transition-transform duration-150 group-hover:rotate-180" />
+              </button>
+              <div
+                class="absolute left-0 top-full pt-2 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 focus-within:visible focus-within:opacity-100 focus-within:translate-y-0 transition-all duration-150"
+              >
+                <div class="min-w-[260px] rounded-[12px] bg-bg-primary border border-border-subtle shadow-[0_8px_24px_rgba(15,23,42,0.08)] p-2">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block px-3 py-2 text-[14px] text-text-secondary rounded-md hover:bg-bg-secondary hover:text-text-primary"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class="px-3 py-2 text-[15px] font-medium text-text-primary hover:text-button-primary"
+            >
+              {item.label}
+            </a>
+          )
+        )
+      }
+    </nav>
+
+    <!-- Desktop CTA -->
+    <div class="hidden lg:flex items-center">
+      <Button href="/contact" variant="primary" size="sm">Book a Demo</Button>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-menu-open"
+      type="button"
+      class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-text-primary"
+      aria-label="Open menu"
+      aria-controls="mobile-drawer"
+      aria-expanded="false"
+    >
+      <IconMenu size={26} />
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div
+    id="mobile-drawer"
+    class="lg:hidden fixed inset-0 z-50 invisible opacity-0 transition-opacity duration-200"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Site navigation"
+  >
+    <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-text-primary/40"></div>
+    <aside
+      class="absolute right-0 top-0 h-full w-[88%] max-w-sm bg-bg-primary shadow-2xl flex flex-col translate-x-full transition-transform duration-200 ease-out"
+      data-drawer-panel
+    >
+      <div class="flex items-center justify-between h-16 px-4 border-b border-border-subtle">
+        <Logo height={24} />
+        <button
+          id="mobile-menu-close"
+          type="button"
+          class="inline-flex items-center justify-center w-11 h-11 rounded-md text-text-primary"
+          aria-label="Close menu"
+        >
+          <IconClose size={24} />
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-2 py-4" aria-label="Mobile">
+        {
+          nav.map((item) =>
+            "children" in item ? (
+              <details class="group/d border-b border-border-subtle last:border-b-0">
+                <summary class="list-none flex items-center justify-between px-4 py-4 text-[16px] font-semibold text-text-primary cursor-pointer">
+                  {item.label}
+                  <IconChevronDown
+                    size={16}
+                    class="transition-transform duration-150 group-open/d:rotate-180"
+                  />
+                </summary>
+                <div class="pb-2">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block px-6 py-3 text-[15px] text-text-secondary hover:text-text-primary"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <a
+                href={item.href}
+                class="block px-4 py-4 text-[16px] font-semibold text-text-primary border-b border-border-subtle last:border-b-0"
+              >
+                {item.label}
+              </a>
+            )
+          )
+        }
+      </nav>
+      <div class="p-4 border-t border-border-subtle">
+        <Button href="/contact" variant="primary" class="w-full">Book a Demo</Button>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById("site-header");
+  const drawer = document.getElementById("mobile-drawer");
+  const openBtn = document.getElementById("mobile-menu-open");
+  const closeBtn = document.getElementById("mobile-menu-close");
+  const backdrop = document.getElementById("mobile-drawer-backdrop");
+  const panel = drawer?.querySelector<HTMLElement>("[data-drawer-panel]");
+
+  // Header scroll shadow
+  const onScroll = () => {
+    if (!header) return;
+    if (window.scrollY > 4) header.dataset.scrolled = "true";
+    else delete header.dataset.scrolled;
+  };
+  document.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Mobile drawer
+  const setDrawer = (open: boolean) => {
+    if (!drawer || !panel) return;
+    if (open) {
+      drawer.classList.remove("invisible", "opacity-0");
+      panel.classList.remove("translate-x-full");
+      openBtn?.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    } else {
+      drawer.classList.add("opacity-0");
+      panel.classList.add("translate-x-full");
+      openBtn?.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      // After transition, restore invisible to prevent focus
+      setTimeout(() => drawer.classList.add("invisible"), 200);
+    }
+  };
+  openBtn?.addEventListener("click", () => setDrawer(true));
+  closeBtn?.addEventListener("click", () => setDrawer(false));
+  backdrop?.addEventListener("click", () => setDrawer(false));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setDrawer(false);
+  });
+</script>

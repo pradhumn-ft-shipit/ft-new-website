@@ -1,0 +1,267 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionShell from "../../components/SectionShell.astro";
+import Eyebrow from "../../components/Eyebrow.astro";
+import Button from "../../components/Button.astro";
+import HeroAccent from "../../components/svg/HeroAccent.astro";
+import Icon from "../../components/svg/Icon.astro";
+import FAQItem from "../../components/FAQItem.astro";
+import TestimonialCard from "../../components/TestimonialCard.astro";
+import FinalCTA from "../../components/sections/FinalCTA.astro";
+
+const capabilities = [
+  {
+    title: "Data Collection",
+    body: "AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review — without another intake form.",
+  },
+  {
+    title: "Documentation",
+    body: "Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. Push to the custodian via API where supported, or generate signature-ready documents.",
+  },
+  {
+    title: "Project Management",
+    body: "Hundreds of households, every form, every status — in one place. Replaces the Excel war room. Visible to you, your team, and your clients.",
+  },
+];
+
+const steps = [
+  {
+    n: "1",
+    title: "We learn your book.",
+    body: "Where you're coming from, where you're going, every household, every account, every quirk. Mapped before day one.",
+  },
+  {
+    n: "2",
+    title: "AI-driven data collection.",
+    body: "What used to take days happens in minutes. Clients confirm what we already have — they don't fill out manual forms again.",
+  },
+  {
+    n: "3",
+    title: "Custodian forms, auto-filled.",
+    body: "Push directly via API where supported, or get pre-filled forms ready for signature. No retyping.",
+  },
+  {
+    n: "4",
+    title: "Visibility, end to end.",
+    body: "Every household, every step — visible from day one to the final asset transfer.",
+  },
+];
+
+const outcomes = [
+  "<strong>75% faster transitions</strong> — same team, more books moved",
+  "<strong>Months → weeks</strong> — typical 90-day timelines compress dramatically",
+  "<strong>Fewer NIGOs</strong> — pre-validated, mapped forms",
+  "<strong>Retained AUM</strong> — faster close means less attrition during the move",
+  "<strong>Calmer advisors and clients</strong> — the part the numbers don't capture",
+];
+
+const faqs = [
+  {
+    q: "Can FastTrackr handle our firm's custom forms?",
+    a: "Yes. Custom forms are mapped during onboarding and from then on are filled, validated, and routed automatically.",
+  },
+  {
+    q: "What happens when the custodian rejects a submission?",
+    a: "The system flags it, surfaces the cause, and guides the correction. Most NIGO patterns are caught before submission in the first place.",
+  },
+  {
+    q: "Do clients fill anything out manually?",
+    a: "As little as possible. Where we can pre-populate, we do. Where we need confirmation, clients see what we already have and confirm — they don't retype it.",
+  },
+  {
+    q: "How is FastTrackr different from generic AI tools?",
+    a: "Generic AI tools added a transition feature. We built the company around the problem. The system understands household structures, custodian-specific quirks, and form variations — because it was built with people who do this for a living.",
+  },
+  {
+    q: "How does pricing work?",
+    a: "For Advisor Transitions, we price based on the time saved and the additional revenue we help capture. Talk to us — we'll work through what fits your situation.",
+  },
+];
+---
+
+<BaseLayout
+  title="Advisor Transitions — FastTrackr AI"
+  description="The AI transition engine for wealth management. Move advisor books in weeks, not months."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-bg-primary">
+    <HeroAccent class="absolute -top-32 -right-40 w-[640px] h-[640px] hidden md:block" />
+    <div class="container-site relative pt-20 md:pt-28 pb-16 md:pb-24">
+      <div class="max-w-[860px]">
+        <Eyebrow>Advisor Transitions</Eyebrow>
+        <h1 class="mt-2 text-h1 text-text-primary">
+          The AI transition engine for wealth management.
+        </h1>
+        <p class="mt-6 text-body-lg text-text-secondary max-w-[700px]">
+          Move advisor books in weeks, not months. Purpose-built for advisor
+          transitions and shaped by the consultants, operators, and RIA founders
+          who do this work every day.
+        </p>
+        <div class="mt-10">
+          <Button href="/contact" variant="primary">Book a Demo</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why broken -->
+  <SectionShell bg="secondary" ariaLabelledby="why-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Why this is broken</p>
+      <h2 id="why-heading" class="mt-3 text-h2 text-text-primary">
+        Repapering hasn't been redesigned in decades.
+      </h2>
+      <div class="mt-6 space-y-5 text-body-lg text-text-secondary">
+        <p>
+          A typical transition takes 90 days. Some take longer. Each household
+          generates dozens of forms — account applications, transfer-of-asset
+          forms, feature forms — multiplied across every account in the book.
+          Tracked in spreadsheets. Chased across email threads. One missing
+          field sends a form back, and the cycle resets.
+        </p>
+        <p>
+          For the advisor, it's months of operational work that has nothing to
+          do with why they got into the business. For the team, it's overtime
+          season. For clients, it's a stretch of silence that some don't wait
+          through.
+        </p>
+        <p class="text-text-primary font-semibold">
+          The industry loses an estimated $19B in client assets every year to
+          transitions that didn't go smoothly enough.
+        </p>
+      </div>
+    </div>
+  </SectionShell>
+
+  <!-- What FastTrackr does -->
+  <SectionShell bg="primary" ariaLabelledby="what-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">What we do</p>
+      <h2 id="what-heading" class="mt-3 text-h2 text-text-primary">
+        Three engines, one system.
+      </h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        capabilities.map((c) => (
+          <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+            <h3 class="text-h3 text-text-primary">{c.title}</h3>
+            <p class="mt-3 text-body text-text-secondary">{c.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </SectionShell>
+
+  <!-- How a transition runs -->
+  <SectionShell bg="secondary" ariaLabelledby="how-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">How a transition runs</p>
+      <h2 id="how-heading" class="mt-3 text-h2 text-text-primary">
+        Four steps from kickoff to last asset moved.
+      </h2>
+    </div>
+
+    <ol class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {
+        steps.map((s) => (
+          <li class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-bg-tint text-brand-green font-semibold">
+              {s.n}
+            </span>
+            <h3 class="mt-4 text-h4 text-text-primary">{s.title}</h3>
+            <p class="mt-3 text-body text-text-secondary">{s.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </SectionShell>
+
+  <!-- Custodian coverage -->
+  <SectionShell bg="primary" density="md" ariaLabelledby="custodians-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Custodian coverage</p>
+      <h2 id="custodians-heading" class="mt-3 text-h2 text-text-primary">
+        Live where you need us, building toward where you're headed.
+      </h2>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+        <h3 class="text-h4 text-text-primary">Live today</h3>
+        <ul class="mt-4 space-y-2 text-body text-text-secondary">
+          <li class="flex items-center gap-2">
+            <span class="text-brand-green"><Icon name="check" size={18} strokeWidth={2.25} /></span>
+            Fidelity
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-brand-green"><Icon name="check" size={18} strokeWidth={2.25} /></span>
+            Charles Schwab
+          </li>
+        </ul>
+        <p class="mt-4 text-body-sm text-text-muted">
+          Together these cover roughly 70% of the market.
+        </p>
+      </div>
+
+      <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+        <h3 class="text-h4 text-text-primary">In active development</h3>
+        <p class="mt-3 text-body text-text-secondary">
+          We're adding new custodian mappings on a rolling basis, prioritized
+          by customer roadmaps. If yours isn't listed, talk to us.
+        </p>
+      </div>
+    </div>
+  </SectionShell>
+
+  <!-- Outcomes -->
+  <SectionShell bg="secondary" ariaLabelledby="outcomes-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Outcomes</p>
+      <h2 id="outcomes-heading" class="sr-only">Outcomes</h2>
+    </div>
+    <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+      {
+        outcomes.map((o) => (
+          <li class="flex items-start gap-3 bg-bg-primary border border-border-subtle rounded-[12px] p-5">
+            <span class="shrink-0 text-brand-green mt-0.5">
+              <Icon name="check" size={20} strokeWidth={2.25} />
+            </span>
+            <span class="text-body text-text-primary" set:html={o} />
+          </li>
+        ))
+      }
+    </ul>
+  </SectionShell>
+
+  <!-- Customer story -->
+  <SectionShell bg="primary" density="md" ariaLabelledby="story-heading">
+    <h2 id="story-heading" class="sr-only">Customer story</h2>
+    <div class="max-w-[860px] mx-auto">
+      <TestimonialCard
+        variant="featured"
+        quote="This is the smoothest transition anyone in our circle has seen or heard about. It aligned with our workflow, and it just worked. We had planned for a month — we finished in two weeks. Amazing tool, very intuitive to use."
+        name="Cana Wealth Advisors"
+        role="Customer"
+      />
+    </div>
+  </SectionShell>
+
+  <!-- FAQ -->
+  <SectionShell bg="secondary" density="md" containerClass="max-w-[820px] mx-auto" ariaLabelledby="at-faq-heading">
+    <div>
+      <p class="text-eyebrow text-brand-green">FAQ</p>
+      <h2 id="at-faq-heading" class="mt-3 text-h2 text-text-primary">
+        Advisor Transitions, in detail.
+      </h2>
+    </div>
+    <div class="mt-10">
+      {faqs.map((f) => <FAQItem question={f.q}>{f.a}</FAQItem>)}
+    </div>
+  </SectionShell>
+
+  <FinalCTA
+    headline="Book a 20-minute walkthrough."
+    subhead="We'll show you exactly how a transition would run for your book."
+  />
+</BaseLayout>

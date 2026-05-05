@@ -1,0 +1,167 @@
+---
+/*
+ * Flywheel loop per 06-visuals §6 (homepage Outcomes).
+ * 4 nodes around a circle, clockwise arrows in brand-green, optional center
+ * cycle glyph. Two layouts (compass for desktop, vertical chain for mobile)
+ * — both hand-drawn so the loop reads at any width.
+ *
+ * Labels are wired from §6 of guideline-copy/02-homepage.md:
+ *   Faster transition → Better client experience → Retained AUM →
+ *   Smoother next transition → (loops)
+ */
+
+const labels = [
+  "Faster transition",
+  "Better client experience",
+  "Retained AUM",
+  "Smoother next transition",
+];
+---
+
+<div class="flywheel">
+  <!-- ── Desktop: compass layout ─────────────────────────── -->
+  <svg
+    class="hidden md:block w-full max-w-[760px] mx-auto"
+    viewBox="0 0 720 460"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-labelledby="flywheel-title flywheel-desc"
+  >
+    <title id="flywheel-title">FastTrackr transition flywheel</title>
+    <desc id="flywheel-desc">
+      Faster transitions lead to a better client experience, which retains AUM,
+      which makes the next transition smoother — looping back.
+    </desc>
+
+    <defs>
+      <marker
+        id="fw-arrow"
+        viewBox="0 0 10 10"
+        refX="8"
+        refY="5"
+        markerWidth="7"
+        markerHeight="7"
+        orient="auto-start-reverse"
+      >
+        <path d="M0 0 L10 5 L0 10 Z" fill="var(--color-brand-green)" />
+      </marker>
+    </defs>
+
+    <!-- Center cycle glyph -->
+    <g transform="translate(360 230)" opacity="0.18">
+      <circle r="64" fill="none" stroke="var(--color-brand-green)" stroke-width="1.5" stroke-dasharray="3 5" />
+      <path
+        d="M-20 -8 A20 20 0 1 1 -8 18"
+        fill="none"
+        stroke="var(--color-brand-green)"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      <path d="M-13 16 L-8 18 L-6 13" fill="none" stroke="var(--color-brand-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Arrows (drawn behind nodes so node fills overpaint the arrow tails) -->
+    <g fill="none" stroke="var(--color-brand-green)" stroke-width="2" stroke-linecap="round">
+      <!-- top → right -->
+      <path d="M450 80 Q540 100 555 190" marker-end="url(#fw-arrow)" />
+      <!-- right → bottom -->
+      <path d="M555 270 Q540 360 450 380" marker-end="url(#fw-arrow)" />
+      <!-- bottom → left -->
+      <path d="M270 380 Q180 360 165 270" marker-end="url(#fw-arrow)" />
+      <!-- left → top -->
+      <path d="M165 190 Q180 100 270 80" marker-end="url(#fw-arrow)" />
+    </g>
+
+    <!-- Nodes -->
+    <g>
+      {[
+        { x: 280, y: 38, label: labels[0] },
+        { x: 480, y: 198, label: labels[1] },
+        { x: 280, y: 358, label: labels[2] },
+        { x: 80,  y: 198, label: labels[3] },
+      ].map((n) => (
+        <g transform={`translate(${n.x} ${n.y})`}>
+          <rect
+            width="160"
+            height="64"
+            rx="14"
+            fill="var(--color-bg-primary)"
+            stroke="var(--color-brand-green)"
+            stroke-width="1.5"
+          />
+          <text
+            x="80"
+            y="36"
+            text-anchor="middle"
+            font-family="var(--font-sans)"
+            font-size="14"
+            font-weight="600"
+            fill="var(--color-text-primary)"
+          >{n.label}</text>
+        </g>
+      ))}
+    </g>
+  </svg>
+
+  <!-- ── Mobile: vertical chain with loop-back ───────────── -->
+  <svg
+    class="md:hidden w-full max-w-[320px] mx-auto"
+    viewBox="0 0 320 540"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="FastTrackr transition flywheel"
+  >
+    <defs>
+      <marker
+        id="fw-arrow-m"
+        viewBox="0 0 10 10"
+        refX="8"
+        refY="5"
+        markerWidth="6"
+        markerHeight="6"
+        orient="auto-start-reverse"
+      >
+        <path d="M0 0 L10 5 L0 10 Z" fill="var(--color-brand-green)" />
+      </marker>
+    </defs>
+
+    <!-- Down arrows between nodes -->
+    <g fill="none" stroke="var(--color-brand-green)" stroke-width="2" stroke-linecap="round">
+      <path d="M120 76 V104" marker-end="url(#fw-arrow-m)" />
+      <path d="M120 196 V224" marker-end="url(#fw-arrow-m)" />
+      <path d="M120 316 V344" marker-end="url(#fw-arrow-m)" />
+      <!-- Loop-back: from bottom node, curve right and up to top node -->
+      <path
+        d="M200 460 C 290 460, 290 60, 200 60"
+        marker-end="url(#fw-arrow-m)"
+      />
+    </g>
+
+    <!-- Nodes (4 stacked) -->
+    {labels.map((label, i) => (
+      <g transform={`translate(40 ${i * 120 + 16})`}>
+        <rect
+          width="200"
+          height="60"
+          rx="12"
+          fill="var(--color-bg-primary)"
+          stroke="var(--color-brand-green)"
+          stroke-width="1.5"
+        />
+        <text
+          x="100"
+          y="34"
+          text-anchor="middle"
+          font-family="var(--font-sans)"
+          font-size="13"
+          font-weight="600"
+          fill="var(--color-text-primary)"
+        >{label}</text>
+      </g>
+    ))}
+  </svg>
+
+  <p class="mt-8 max-w-[640px] mx-auto text-center text-body-sm italic text-text-secondary">
+    Every transition makes the next one easier. The system learns. So does your team.
+  </p>
+</div>

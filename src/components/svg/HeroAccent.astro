@@ -1,0 +1,44 @@
+---
+/*
+ * Subtle abstract shape for the hero upper-right (06-visuals §1.1 / §1).
+ * Brand-green at 5% opacity — soft, geometric, no gradients beyond this.
+ * Renders behind hero text; absolutely positioned by the parent.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 600"
+  fill="none"
+  aria-hidden="true"
+  class={className}
+>
+  <defs>
+    <radialGradient id="hero-accent-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="var(--color-brand-green)" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="var(--color-brand-green)" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="var(--color-brand-green)" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Soft brand-green halo -->
+  <circle cx="300" cy="300" r="280" fill="url(#hero-accent-glow)" />
+
+  <!-- Three concentric arcs at low opacity -->
+  <g stroke="var(--color-brand-green)" stroke-opacity="0.08" fill="none" stroke-width="1.5">
+    <circle cx="300" cy="300" r="140" />
+    <circle cx="300" cy="300" r="200" />
+    <circle cx="300" cy="300" r="260" />
+  </g>
+
+  <!-- Forward chevron motif, very subtle -->
+  <g stroke="var(--color-brand-green)" stroke-opacity="0.10" stroke-linecap="round" stroke-width="2" fill="none">
+    <path d="M250 250 L320 300 L250 350" />
+    <path d="M295 250 L365 300 L295 350" stroke-opacity="0.06" />
+  </g>
+</svg>

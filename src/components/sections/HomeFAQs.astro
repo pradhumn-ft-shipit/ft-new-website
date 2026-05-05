@@ -1,0 +1,58 @@
+---
+import SectionShell from "../SectionShell.astro";
+import FAQItem from "../FAQItem.astro";
+
+const faqs = [
+  {
+    q: "How is FastTrackr different from a generic AI tool?",
+    a: `We didn't add a "transition" feature to a general-purpose product. FastTrackr was built for advisor transitions from the start — shaped by consultants and operators who move billions in client assets every year. The system understands the household structures, custodian quirks, and form variations that generic AI tools don't.`,
+  },
+  {
+    q: "Which custodians do you support?",
+    a: "We've built mappings for Fidelity and Schwab today, which together cover roughly 70% of the market. We're actively adding more — and we work with firms to build mappings for any custodian on their roadmap.",
+  },
+  {
+    q: "How does FastTrackr handle our firm's specific forms?",
+    a: "We map your firm's documentation into the workflow during onboarding. Once it's mapped, the system pre-fills it, validates it, and pushes it to wherever it needs to go. New forms or revisions are absorbed without re-platforming.",
+  },
+  {
+    q: "Do you train your AI on our client data?",
+    aHTML: `No. Your client data is yours. We don't use it to train any models. See our <a href="/privacy-policy" class="underline hover:text-text-primary">Privacy Policy</a> for the full detail.`,
+  },
+  {
+    q: "Is our data secure?",
+    a: "Yes. Encryption in transit and at rest, role-based access, and full audit trails. Compliance documentation is available on request — your compliance team can reach out and we'll send the security packet.",
+  },
+  {
+    q: "How fast can we go live?",
+    a: "For most firms, in a matter of days, not months. Setup happens in parallel with your first transition — so you start seeing time saved on day one.",
+  },
+  {
+    q: "Can we use just the Meeting Assistant or Document Intelligence module?",
+    a: "Yes. The modules are independent. Many firms start with one and expand. Pricing is module-based, so you only pay for what you use.",
+  },
+  {
+    q: "How is FastTrackr priced?",
+    aHTML: `For Advisor Transitions, we price based on the time saved and the additional revenue we help you capture. For other modules, pricing is per-seat. The <a href="/pricing" class="underline hover:text-text-primary">Pricing</a> page has more — or we can walk through it on a call.`,
+  },
+];
+---
+
+<SectionShell bg="primary" density="md" containerClass="max-w-[820px] mx-auto" ariaLabelledby="faq-heading">
+  <div class="text-center">
+    <p class="text-eyebrow text-brand-green">FAQ</p>
+    <h2 id="faq-heading" class="mt-3 text-h2 text-text-primary">
+      Questions worth answering up front.
+    </h2>
+  </div>
+
+  <div class="mt-12">
+    {
+      faqs.map((f) => (
+        <FAQItem question={f.q}>
+          {f.aHTML ? <span set:html={f.aHTML} /> : f.a}
+        </FAQItem>
+      ))
+    }
+  </div>
+</SectionShell>

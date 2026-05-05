@@ -1,0 +1,80 @@
+---
+/*
+ * Testimonial card per 06-visuals §10. Two variants:
+ *  - default: standard card (32px padding, body-large quote)
+ *  - featured: larger padding, H4 quote — used for the lead testimonial.
+ *
+ * Avatar accepts initials fallback if no `avatar` URL is supplied — we don't
+ * invent stock photos. Quote mark is a brand-green decorative SVG at 20% opacity.
+ */
+interface Props {
+  quote: string;
+  name: string;
+  role: string;
+  firm?: string;
+  avatar?: string;
+  initials?: string;
+  variant?: "default" | "featured";
+  class?: string;
+}
+
+const {
+  quote,
+  name,
+  role,
+  firm,
+  avatar,
+  initials,
+  variant = "default",
+  class: className = "",
+} = Astro.props;
+
+const isFeatured = variant === "featured";
+const padding = isFeatured ? "p-8 md:p-12" : "p-6 md:p-8";
+const quoteCls = isFeatured ? "text-h4" : "text-body-lg";
+---
+
+<figure
+  class={`relative bg-bg-primary border border-border-subtle rounded-[12px] ${padding} ${className}`}
+>
+  <!-- Decorative quote mark -->
+  <svg
+    aria-hidden="true"
+    class="absolute top-5 left-6 w-8 h-8 text-brand-green opacity-20"
+    viewBox="0 0 32 32"
+    fill="currentColor"
+  >
+    <path d="M10 9c-3.5 0-6 2.7-6 6.5v8h7v-7H7.5c.3-2 1.5-3.5 3.5-3.8V9zm14 0c-3.5 0-6 2.7-6 6.5v8h7v-7h-3.5c.3-2 1.5-3.5 3.5-3.8V9z" />
+  </svg>
+
+  <blockquote class={`${quoteCls} text-text-primary mt-2`}>
+    <p>"{quote}"</p>
+  </blockquote>
+
+  <figcaption class="mt-6 flex items-center gap-3">
+    {avatar ? (
+      <img
+        src={avatar}
+        alt=""
+        width="56"
+        height="56"
+        class="w-14 h-14 rounded-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <div
+        aria-hidden="true"
+        class="w-14 h-14 rounded-full bg-bg-tint border border-border-subtle flex items-center justify-center text-text-primary font-semibold"
+      >
+        {initials ?? name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
+      </div>
+    )}
+    <div>
+      <div class="text-body font-semibold text-text-primary">{name}</div>
+      <div class="text-body-sm text-text-secondary">
+        {role}{firm && (<>, {firm}</>)}
+      </div>
+    </div>
+  </figcaption>
+</figure>

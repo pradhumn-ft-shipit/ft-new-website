@@ -1,0 +1,76 @@
+---
+/*
+ * Primary / secondary / tertiary button per 06-visuals §1.4.
+ * - primary: dark-green button, single per section
+ * - secondary: text link with optional trailing arrow
+ * - tertiary: smaller "Learn more →" style
+ *
+ * Renders as <a> if href is supplied, otherwise <button>.
+ */
+type Variant = "primary" | "secondary" | "tertiary";
+type Size = "default" | "sm" | "lg";
+
+interface Props {
+  href?: string;
+  variant?: Variant;
+  size?: Size;
+  type?: "button" | "submit";
+  class?: string;
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "default",
+  type = "button",
+  class: className = "",
+  ariaLabel,
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed";
+
+const variantClasses: Record<Variant, string> = {
+  primary:
+    "bg-button-primary text-button-text hover:bg-button-hover hover:scale-[1.02] active:scale-[0.99] rounded-[8px] shadow-none hover:shadow-[0_4px_16px_rgba(15,23,42,0.08)]",
+  secondary:
+    "text-text-primary hover:underline underline-offset-4",
+  tertiary:
+    "text-text-primary hover:text-brand-green",
+};
+
+const sizeClasses: Record<Variant, Record<Size, string>> = {
+  primary: {
+    default: "py-[14px] px-7 text-[16px]",
+    sm: "py-3 px-6 text-[15px]",
+    lg: "py-4 px-8 text-[16px]",
+  },
+  secondary: {
+    default: "text-[16px] font-medium",
+    sm: "text-[14px] font-medium",
+    lg: "text-[18px] font-medium",
+  },
+  tertiary: {
+    default: "text-[15px] font-medium",
+    sm: "text-[14px] font-medium",
+    lg: "text-[16px] font-medium",
+  },
+};
+
+const cls = [base, variantClasses[variant], sizeClasses[variant][size], className]
+  .filter(Boolean)
+  .join(" ");
+---
+
+{
+  href ? (
+    <a href={href} class={cls} aria-label={ariaLabel}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class={cls} aria-label={ariaLabel}>
+      <slot />
+    </button>
+  )
+}

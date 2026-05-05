@@ -1,0 +1,67 @@
+---
+import ICPLayout, { type ICPPage } from "../../layouts/ICPLayout.astro";
+
+const page: ICPPage = {
+  eyebrow: "For Custodians",
+  title: "For Custodians",
+  hero: {
+    headline: "Be the on-ramp for every new RIA and advisory practice.",
+    subhead:
+      "You want to attract more advisors and practices to your platform. Today, the onboarding experience is owned by everyone except you. FastTrackr puts it back in your hands.",
+  },
+  pain: [
+    "You're competing for advisor practices. The platform is ready. The pricing is competitive. The team is hungry.",
+    "But the actual experience of moving to your platform? That's owned by RIAs, BDs, and transition consultants — and the quality varies wildly. Some practices arrive smoothly. Others arrive bruised, and they remember.",
+    "Word travels fast in advisor circles. \"Going to [Custodian X] was painful\" lives longer in conversation than any marketing campaign you'll run this year.",
+  ],
+  whatHeadline:
+    "We help your advisors grow faster, acquire better, and onboard onto your platform smoothly.",
+  what: [
+    {
+      title: "Embed in custodial onboarding.",
+      body: "FastTrackr becomes the operational layer for any RIA or practice moving to your platform.",
+    },
+    {
+      title: "Branded experience.",
+      body: "Co-branded or white-labeled — the move feels like your platform, not a third party.",
+    },
+    {
+      title: "Help your advisors win their own deals.",
+      body: "Advisors and RIAs on your platform get the same transition tooling for their breakaways and acquisitions. They grow faster. Their AUM grows faster. So does yours.",
+    },
+    {
+      title: "Visibility into your incoming book.",
+      body: "See practices in transit, status by household, projected go-live dates — all in one place.",
+    },
+  ],
+  outcomes: [
+    "<strong>More practices onboarded</strong> — easier moves drive word-of-mouth",
+    "<strong>Faster asset growth on your platform</strong> — advisors hit productivity sooner",
+    "<strong>Better experience for your existing advisors</strong> — they grow faster, you grow with them",
+    "<strong>Stronger differentiation in the custodian race</strong> — operational excellence as a moat",
+  ],
+  faqs: [
+    {
+      q: "How deep does the integration go?",
+      a: "As deep as you want. We can run alongside your existing onboarding tooling, embed within it, or extend it. Talk to us about your priorities.",
+    },
+    {
+      q: "Can we white-label this for advisors moving to our platform?",
+      a: "Yes. The experience can be branded fully.",
+    },
+    {
+      q: "Where does data live? Who owns it?",
+      a: "You and the advisor own the data. We process it under strict controls and never train models on it. Full details on the Privacy Policy.",
+    },
+    {
+      q: "How does pricing work for custodians?",
+      a: "Enterprise structures tied to volume of advisors and practices onboarded. We tailor it to your platform's economics.",
+    },
+  ],
+  finalCta: {
+    headline: "Let's make your platform the easiest place to land.",
+  },
+};
+---
+
+<ICPLayout page={page} />

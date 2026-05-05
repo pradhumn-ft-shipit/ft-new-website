@@ -1,0 +1,213 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionShell from "../components/SectionShell.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import HeroAccent from "../components/svg/HeroAccent.astro";
+import FinalCTA from "../components/sections/FinalCTA.astro";
+
+const leadership = [
+  {
+    name: "Vineet Mohan",
+    role: "Co-founder & CEO",
+    bio: "Ex-HSBC top 1% leadership; 15 years in financial services globally (7 in the US); successful startup investor. IIM Bangalore, NIT Calicut.",
+  },
+  {
+    name: "Kartik Kumar",
+    role: "Head of Engineering",
+    bio: "Senior engineering roles at unicorns (OYO, Games24x7); led AI build for high-scale systems. BITS Pilani.",
+  },
+  {
+    name: "Pradhumn V",
+    role: "GTM & Product",
+    bio: "Led 0-1 GTM for B2B SaaS and AI startups previously. Ex-founder, IIM alumnus.",
+  },
+];
+
+const advisors = [
+  {
+    name: "James Cantwell",
+    role: "Founder, WealthTech Select",
+    bio: "25 years of operational and tech expertise; influential industry voice.",
+  },
+  {
+    name: "Sukesh Pai",
+    role: "Founder, Trillium Square",
+    bio: "RIA owner with strong technology and investments background.",
+  },
+  {
+    name: "Andy Burgess",
+    role: "Founder, Foresight Consulting",
+    bio: "Industry veteran with leadership roles at top RIAs and custodians (Mercer, NewEdge, Fidelity, Schwab).",
+  },
+];
+
+function initials(name: string) {
+  return name
+    .split(" ")
+    .map((p) => p[0])
+    .slice(0, 2)
+    .join("");
+}
+---
+
+<BaseLayout
+  title="About — FastTrackr AI"
+  description="We're reimagining wealth management. One complex workflow at a time. Starting with advisor transitions."
+>
+  <section class="relative overflow-hidden bg-bg-primary">
+    <HeroAccent class="absolute -top-32 -right-40 w-[640px] h-[640px] hidden md:block" />
+    <div class="container-site relative pt-20 md:pt-28 pb-16 md:pb-20">
+      <div class="max-w-[860px]">
+        <Eyebrow>About FastTrackr AI</Eyebrow>
+        <h1 class="mt-2 text-h1 text-text-primary">
+          We're reimagining wealth management. One complex workflow at a time.
+        </h1>
+        <p class="mt-6 text-body-lg text-text-secondary max-w-[700px]">
+          FastTrackr is building the operating layer for the workflows that
+          wealth management has lived with for decades — starting with advisor
+          transitions, the hardest of them all.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <SectionShell bg="secondary" ariaLabelledby="why-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Why we exist</p>
+      <h2 id="why-heading" class="mt-3 text-h2 text-text-primary">
+        Wealth management is in transition.
+      </h2>
+      <div class="mt-6 space-y-5 text-body-lg text-text-secondary">
+        <p>
+          Advisors are moving firms at record rates. RIAs are growing through
+          acquisition. The advisor population is aging — and a generation of
+          practices will change hands over the next decade. The plumbing
+          underneath all of this — the repapering, the data migration, the
+          operational handoffs — wasn't built for the volume the industry is
+          now running.
+        </p>
+        <p>
+          We're building what comes next. AI that actually understands the
+          work. Workflows shaped by the people who do it. A system that gets
+          better with every transition it runs.
+        </p>
+      </div>
+    </div>
+  </SectionShell>
+
+  <SectionShell bg="primary" ariaLabelledby="how-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">How we got here</p>
+      <h2 id="how-heading" class="mt-3 text-h2 text-text-primary">
+        We started with conversations.
+      </h2>
+      <div class="mt-6 space-y-5 text-body-lg text-text-secondary">
+        <p>
+          Over 150 of them — with advisors, ops leaders, transition consultants,
+          and operators at firms across the industry. We listened to where the
+          work breaks. We built around what we heard.
+        </p>
+        <p>
+          Today, FastTrackr is in production with a top transition consultant,
+          used by paying advisors and firms, and in active conversations with
+          broker-dealers, custodians, and RIAs serving billions in client assets.
+        </p>
+      </div>
+    </div>
+  </SectionShell>
+
+  <SectionShell bg="secondary" ariaLabelledby="leadership-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Leadership</p>
+      <h2 id="leadership-heading" class="mt-3 text-h2 text-text-primary">
+        The team building it.
+      </h2>
+    </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        leadership.map((p) => (
+          <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+            <div
+              aria-hidden="true"
+              class="w-16 h-16 rounded-full bg-bg-tint border border-border-subtle flex items-center justify-center text-text-primary font-semibold"
+            >{initials(p.name)}</div>
+            <h3 class="mt-4 text-h4 text-text-primary">{p.name}</h3>
+            <p class="text-body-sm text-brand-green font-semibold mt-1">{p.role}</p>
+            <p class="mt-3 text-body-sm text-text-secondary">{p.bio}</p>
+          </div>
+        ))
+      }
+    </div>
+  </SectionShell>
+
+  <SectionShell bg="primary" ariaLabelledby="advisors-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Advisory board</p>
+      <h2 id="advisors-heading" class="mt-3 text-h2 text-text-primary">
+        Industry voices in the room.
+      </h2>
+    </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        advisors.map((p) => (
+          <div class="bg-bg-primary border border-border-subtle rounded-[12px] p-6 md:p-8">
+            <div
+              aria-hidden="true"
+              class="w-16 h-16 rounded-full bg-bg-tint border border-border-subtle flex items-center justify-center text-text-primary font-semibold"
+            >{initials(p.name)}</div>
+            <h3 class="mt-4 text-h4 text-text-primary">{p.name}</h3>
+            <p class="text-body-sm text-brand-green font-semibold mt-1">{p.role}</p>
+            <p class="mt-3 text-body-sm text-text-secondary">{p.bio}</p>
+          </div>
+        ))
+      }
+    </div>
+  </SectionShell>
+
+  <SectionShell bg="secondary" density="md" ariaLabelledby="investors-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Investors</p>
+      <h2 id="investors-heading" class="mt-3 text-h2 text-text-primary">
+        Backed by gAI Ventures.
+      </h2>
+      <p class="mt-5 text-body-lg text-text-secondary">
+        gAI Ventures — venture studio and investor.
+      </p>
+      <ul class="mt-6 space-y-3 text-body text-text-secondary">
+        <li>
+          <span class="font-semibold text-text-primary">Amit Goel (CEO):</span>
+          Serial founder, built and sold a fintech to a US unicorn (Prove)
+        </li>
+        <li>
+          <span class="font-semibold text-text-primary">Kushal Prakash (CTO):</span>
+          Ex-fintech founder, AI researcher (TU-Delft + BITS Pilani), Forbes 30U30
+        </li>
+      </ul>
+    </div>
+  </SectionShell>
+
+  <SectionShell bg="primary" density="sm" ariaLabelledby="contact-heading">
+    <div class="max-w-[820px]">
+      <p class="text-eyebrow text-brand-green">Get in touch</p>
+      <h2 id="contact-heading" class="mt-3 text-h2 text-text-primary">
+        We'd love to hear from you.
+      </h2>
+      <ul class="mt-6 space-y-2 text-body-lg text-text-secondary">
+        <li>
+          Email:
+          <a class="underline hover:text-text-primary" href="mailto:vineet@fasttrackr.ai">
+            vineet@fasttrackr.ai
+          </a>
+        </li>
+        <li>
+          Phone:
+          <a class="underline hover:text-text-primary" href="tel:+14159370609">
+            (415)-937-0609
+          </a>
+        </li>
+      </ul>
+    </div>
+  </SectionShell>
+
+  <FinalCTA />
+</BaseLayout>

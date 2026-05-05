@@ -1,0 +1,39 @@
+---
+/*
+ * Default card per 06-visuals §1.5: white bg, 1px border-subtle, 12px radius,
+ * 32px padding desktop / 24px mobile, optional clickable hover lift.
+ */
+interface Props {
+  href?: string;
+  hoverLift?: boolean;
+  class?: string;
+  padding?: "default" | "lg";
+}
+
+const {
+  href,
+  hoverLift = false,
+  class: className = "",
+  padding = "default",
+} = Astro.props;
+
+const padCls = padding === "lg" ? "p-6 md:p-10" : "p-6 md:p-8";
+const base = `block bg-bg-primary border border-border-subtle rounded-[12px] ${padCls} transition-all duration-200`;
+const hover = hoverLift
+  ? "hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(15,23,42,0.06)]"
+  : "";
+
+const cls = [base, hover, className].filter(Boolean).join(" ");
+---
+
+{
+  href ? (
+    <a href={href} class={cls}>
+      <slot />
+    </a>
+  ) : (
+    <div class={cls}>
+      <slot />
+    </div>
+  )
+}

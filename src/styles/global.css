@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens are defined in src/styles/tokens.css and surfaced to Tailwind
+ * via the @theme directive there. Per CLAUDE.md, the source of truth for
+ * tokens is guideline-copy/06-visuals.md — do not invent new tokens here.
+ */
+@import "./tokens.css";

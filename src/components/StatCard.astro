@@ -1,0 +1,24 @@
+---
+/*
+ * Outcomes stat card per 06-visuals §6: Display-size stat in button-primary
+ * (dark green), H4 label, body-sm description. Centered.
+ */
+interface Props {
+  stat: string;
+  label: string;
+  description?: string;
+  class?: string;
+}
+
+const { stat, label, description, class: className = "" } = Astro.props;
+---
+
+<div
+  class={`bg-bg-primary border border-border-subtle rounded-[12px] p-8 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(15,23,42,0.06)] ${className}`}
+>
+  <div class="text-display text-button-primary leading-none">{stat}</div>
+  <div class="mt-3 text-h4 text-text-primary">{label}</div>
+  {description && (
+    <p class="mt-2 text-body-sm text-text-secondary">{description}</p>
+  )}
+</div>

@@ -1,0 +1,48 @@
+---
+/*
+ * Standard section wrapper. Handles the 120/64 padding rhythm and bg variants
+ * from 06-visuals §1.3. Use everywhere instead of a raw <section>.
+ */
+type Bg = "primary" | "secondary" | "tint";
+type Density = "default" | "md" | "sm";
+
+interface Props {
+  bg?: Bg;
+  density?: Density;
+  id?: string;
+  class?: string;
+  containerClass?: string;
+  ariaLabelledby?: string;
+}
+
+const {
+  bg = "primary",
+  density = "default",
+  id,
+  class: className = "",
+  containerClass = "",
+  ariaLabelledby,
+} = Astro.props;
+
+const bgClass: Record<Bg, string> = {
+  primary: "bg-bg-primary",
+  secondary: "bg-bg-secondary",
+  tint: "bg-bg-tint",
+};
+
+const densityClass: Record<Density, string> = {
+  default: "section-y",
+  md: "section-y-md",
+  sm: "section-y-sm",
+};
+---
+
+<section
+  id={id}
+  aria-labelledby={ariaLabelledby}
+  class={`${bgClass[bg]} ${densityClass[density]} ${className}`}
+>
+  <div class={`container-site ${containerClass}`}>
+    <slot />
+  </div>
+</section>
