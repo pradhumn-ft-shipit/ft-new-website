@@ -35,7 +35,7 @@ _All sections in order. Copywriter notes are in italics where helpful._
 
 ## §1. HERO
 
-**Headline (option A — recommended):**
+**Headline (option A, recommended):**
 Advisor transitions, finally built right.
 
 **Headline (option B):**
@@ -45,7 +45,7 @@ Move advisor books in weeks, not months.
 The AI transition engine for wealth management.
 
 **Subhead:**
-Purpose-built AI for advisor transitions — shaped by consultants, operators, and RIA founders who move billions in client assets every year.
+Purpose-built AI for advisor transitions, shaped by consultants, operators, and RIA founders who move billions in client assets every year.
 
 **Primary CTA:** Book a Demo
 **Secondary link (text-only, smaller):** See how it works ↓ _(anchor-scrolls to §5 How It Works)_
@@ -57,7 +57,7 @@ Purpose-built AI for advisor transitions — shaped by consultants, operators, a
 **Heading line:**
 Shaped by advisors and operators at
 
-_[Logo strip — cleared logos only. See guardrails doc.]_
+_[Logo strip, cleared logos only. See guardrails doc.]_
 
 ---
 
@@ -67,7 +67,7 @@ _[Logo strip — cleared logos only. See guardrails doc.]_
 If you've moved a book before, you know.
 
 **Subhead:**
-Repapering hasn't been redesigned in decades. Advisors live with it. Their teams burn out for it. Their clients quietly suffer through it.
+Repapering hasn't changed in decades. Advisors and their teams just learned to live with it. The process is broken, and clients, advisors, and teams all suffer for it.
 
 **Pain cards (6, in a grid):**
 
@@ -75,7 +75,7 @@ Repapering hasn't been redesigned in decades. Advisors live with it. Their teams
 Months of repapering before the last asset transfers. Revenue paused. Client relationships in limbo.
 
 **Hundreds of forms. Per book.**
-Account applications, transfer-of-asset forms, feature forms — multiplied by every household. Then multiplied again on rejection.
+Account applications, transfer-of-asset forms, feature forms, multiplied by every household. Then multiplied again on rejection.
 
 **Tracked in spreadsheets.**
 Hundreds of accounts. Ops teams chasing status across emails, PDFs, and tabs. One mis-keyed cell and the picture changes.
@@ -97,20 +97,20 @@ They notice when the move feels disorganized. Some quietly walk.
 Built for transition. Not retrofitted with it.
 
 **Body:**
-Most tools that mention transitions added a feature. We built the company around it. FastTrackr is shaped by transition consultants, ops leaders, and RIA founders who've moved billions in client assets — and we've encoded what they know into a system that handles the work, the quirks, and the edge cases that generic tools miss.
+FastTrackr is shaped by transition consultants, ops leaders, and RIA founders who've moved billions in client assets, and we've encoded what they know into a system that handles the work, the quirks, and the edge cases that others miss.
 
-Every transition is different. We get that. The system flexes around your book — not the other way around.
+**Bold callout:** Every transition is different. We get that. The system flexes around your book, not the other way around.
 
 **Three capability blocks:**
 
 **Data Collection**
-AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review — without another intake form.
+AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review, without another intake form.
 
 **Documentation**
-Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. No more manual cross-referencing.
+Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. Or pushed directly to their systems. No more manual cross-referencing.
 
 **Project Management**
-Hundreds of households, every form, every status — visible in one place. No more spreadsheets, no more blind handoffs.
+Hundreds of households, every form, every status, visible in one place. No more spreadsheets, no more blind handoffs.
 
 ---
 
@@ -120,19 +120,19 @@ Hundreds of households, every form, every status — visible in one place. No mo
 Every transition is different. We've built for that.
 
 **Subhead:**
-No two books move the same way. The process flexes around your specifics — your book, your custodians, your edge cases.
+No two books move the same way. The process flexes around your specifics, your book, your custodians, your edge cases.
 
-**Step 1 — We learn your book**
-Where you're coming from. Where you're going. Every household, every account, every quirk. Mapped before day one — so nothing surprises you mid-move.
+**Step 1, We learn your book**
+Where you're coming from. Where you're going. Every household, every account, every quirk. Mapped before day one, so nothing surprises you mid-move.
 
-**Step 2 — AI-driven data collection**
-What used to take days happens in minutes. Clients confirm what we already have — they don't fill out manual forms again. The intake disappears, the experience improves.
+**Step 2, AI-driven data collection**
+What used to take days happens in minutes. Clients confirm what we already have, they don't fill out manual forms again. The intake disappears, the experience improves.
 
-**Step 3 — Custodian forms, auto-filled**
-Push directly to your custodian via API where supported. Or get pre-filled forms ready for client signature. Either way — no retyping, no copy-paste between tabs.
+**Step 3, Custodian forms, auto-filled**
+Push directly to your custodian via API where supported. Or get pre-filled forms ready for client signature. Either way, no retyping, no copy-paste between tabs.
 
-**Step 4 — Visibility, end to end**
-From day one to the final asset transfer. Every household, every step — visible to you, your team, and your clients. No more blind handoffs. No more "where are we on this one?"
+**Step 4, Visibility, end to end**
+From day one to the final asset transfer. Every household, every step, visible to you, your team, and your clients. No more blind handoffs. No more "where are we on this one?"
 
 ---
 
@@ -156,7 +156,7 @@ Pre-validated, mapped forms. Cleaner submissions.
 Faster close means less attrition during the move.
 
 **Soft kicker (below the stats):**
-And what doesn't show up in the numbers — calmer advisors, clients who barely notice the move, and ops teams that stop dreading next month.
+And what doesn't show up in the numbers, calmer advisors, clients who barely notice the move, and ops teams that stop dreading next month.
 
 **Flywheel loop visual (described for designer):**
 A simple 4-node loop showing:
@@ -173,7 +173,7 @@ Caption under the loop: _Every transition makes the next one easier. The system 
 Built for every player in the transition.
 
 **Subhead:**
-Same product. Different language for different roles. Click through to see what changes for you.
+Click through to see what changes for you.
 
 **Cards (5):**
 
@@ -214,7 +214,7 @@ Pre-meeting prep, in-meeting notes, post-meeting follow-ups. CRM updated in one 
 _Learn more →_
 
 **Document Intelligence**
-Brokerage statements, tax docs, equity comp — extracted, organized, and ready for analysis. Goes from a stack of PDFs to insight in minutes.
+Brokerage statements, tax docs, equity comp, extracted, organized, and ready for analysis. Goes from a stack of PDFs to insight in minutes.
 _Learn more →_
 
 ---
@@ -227,7 +227,7 @@ _[Note for build: this section is optional. Can be hidden via CMS toggle if the 
 Works with the stack you already have.
 
 **Body:**
-FastTrackr fits into your existing tools — no rip-and-replace. Custodial portals, CRMs, financial planning software, e-signature platforms. We extend what you have rather than ask you to start over.
+FastTrackr fits into your existing tools, no rip-and-replace. Custodial portals, CRMs, financial planning software, e-signature platforms. We extend what you have rather than ask you to start over.
 
 _[Logo grid of integration partners]_
 
@@ -241,11 +241,11 @@ Some integrations are live; others are in active development. We're adding new o
 **Section headline:**
 Top-performing advisors and firms use FastTrackr.
 
-> This is the smoothest transition anyone in our circle has seen or heard about. It aligned with our workflow, and it just worked. We had planned for a month — we finished in two weeks. Amazing tool, very intuitive to use.
+> This is the smoothest transition anyone in our circle has seen or heard about. It aligned with our workflow, and it just worked. We had planned for a month, we finished in two weeks. Amazing tool, very intuitive to use.
 >
 > **Cana Wealth Advisors**
 
-> FastTrackr AI has been a game-changer for our practice. We're saving 10–15 hours weekly on meeting prep, CRM updates and follow-ups. Our clients love how quickly we follow up and that we never miss important details. It's made us more efficient and our service much better — honestly can't imagine running our firm without it.
+> FastTrackr AI has been a game-changer for our practice. We're saving 10–15 hours weekly on meeting prep, CRM updates and follow-ups. Our clients love how quickly we follow up and that we never miss important details. It's made us more efficient and our service much better, honestly can't imagine running our firm without it.
 >
 > **Christian von Stackelberg**, Partner, Radius Wealth Management
 
@@ -253,11 +253,11 @@ Top-performing advisors and firms use FastTrackr.
 >
 > **Gregg D. Jensen**, CCO and Head of Financial Planning, Pathway Partners
 
-> After evaluating multiple AI solutions for our practice, we chose FastTrackr for document processing. Its integrated platform has been invaluable — we quickly expanded to using the meeting assistant and data intake modules as well. The time savings are impressive, and even more importantly, the quality of our financial planning and client deliverables has improved significantly.
+> After evaluating multiple AI solutions for our practice, we chose FastTrackr for document processing. Its integrated platform has been invaluable, we quickly expanded to using the meeting assistant and data intake modules as well. The time savings are impressive, and even more importantly, the quality of our financial planning and client deliverables has improved significantly.
 >
 > **Sukesh Pai**, Founder, Trillium Square Advisors
 
-_[Recommend featuring the Cana Wealth Advisors testimonial most prominently — it's the most transition-specific.]_
+_[Recommend featuring the Cana Wealth Advisors testimonial most prominently, it's the most transition-specific.]_
 
 ---
 
@@ -267,10 +267,10 @@ _[Recommend featuring the Cana Wealth Advisors testimonial most prominently — 
 Questions worth answering up front.
 
 **Q: How is FastTrackr different from a generic AI tool?**
-We didn't add a "transition" feature to a general-purpose product. FastTrackr was built for advisor transitions from the start — shaped by consultants and operators who move billions in client assets every year. The system understands the household structures, custodian quirks, and form variations that generic AI tools don't.
+We didn't add a "transition" feature to a general-purpose product. FastTrackr was built for advisor transitions from the start, shaped by consultants and operators who move billions in client assets every year. The system understands the household structures, custodian quirks, and form variations that generic AI tools don't.
 
 **Q: Which custodians do you support?**
-We've built mappings for Fidelity and Schwab today, which together cover roughly 70% of the market. We're actively adding more — and we work with firms to build mappings for any custodian on their roadmap.
+We already support the major custodians. If you'd like to know whether yours is covered, drop us a note via the contact form and we'll share specifics. If you're a custodian and want to talk about partnership, write to us the same way.
 
 **Q: How does FastTrackr handle our firm's specific forms?**
 We map your firm's documentation into the workflow during onboarding. Once it's mapped, the system pre-fills it, validates it, and pushes it to wherever it needs to go. New forms or revisions are absorbed without re-platforming.
@@ -279,16 +279,16 @@ We map your firm's documentation into the workflow during onboarding. Once it's 
 No. Your client data is yours. We don't use it to train any models. See our [Privacy Policy](/privacy-policy) for the full detail.
 
 **Q: Is our data secure?**
-Yes. Encryption in transit and at rest, role-based access, and full audit trails. Compliance documentation is available on request — your compliance team can reach out and we'll send the security packet.
+Yes. Encryption in transit and at rest, role-based access, and full audit trails. Compliance documentation is available on request, your compliance team can reach out and we'll send the security packet.
 
 **Q: How fast can we go live?**
-For most firms, in a matter of days, not months. Setup happens in parallel with your first transition — so you start seeing time saved on day one.
+For most firms, in a matter of days, not months. Setup happens in parallel with your first transition, so you start seeing time saved on day one.
 
 **Q: Can we use just the Meeting Assistant or Document Intelligence module?**
 Yes. The modules are independent. Many firms start with one and expand. Pricing is module-based, so you only pay for what you use.
 
 **Q: How is FastTrackr priced?**
-For Advisor Transitions, we price based on the time saved and the additional revenue we help you capture. For other modules, pricing is per-seat. The [Pricing](/pricing) page has more — or we can walk through it on a call.
+For Advisor Transitions, we price based on the time saved and the additional revenue we help you capture. For other modules, pricing is per-seat. The [Pricing](/pricing) page has more, or we can walk through it on a call.
 
 ---
 
@@ -301,41 +301,41 @@ Let's reimagine how your next transition feels.
 A 20-minute walkthrough is enough to show you whether this works for your book.
 
 **CTA button:** Book a Demo
-**Secondary line:** Or email vineet@fasttrackr.ai
+**Secondary line:** Prefer to write first? Send us a note via the contact form.
 
 ---
 
 ## §13. FOOTER (sitewide)
 
-**Top of footer — brand block:**
+**Top of footer, brand block:**
 - FastTrackr AI logo
 - Tagline: _Reimagining wealth management. One complex workflow at a time._
 
-**Column 1 — Solutions:**
+**Column 1, Solutions:**
 - Advisor Transitions
 - Client Onboarding
 - Meeting Assistant
 - Document Intelligence
 
-**Column 2 — Who We Serve:**
+**Column 2, Who We Serve:**
 - Transition Consultants
 - Breakaway Advisors
 - Acquisitive RIAs
 - Independent Broker-Dealers
 - Custodians
 
-**Column 3 — Resources:**
+**Column 3, Resources:**
 - Blog
 - Advisor Ally Podcast
-- _(Case Studies — when available)_
+- _(Case Studies, when available)_
 
-**Column 4 — Company:**
+**Column 4, Company:**
 - About
 - Pricing
 - Contact
 - Book a Demo
 
-**Advisor Ally Podcast block (existing — retain):**
+**Advisor Ally Podcast block (existing, retain):**
 > **Advisor Ally Podcast**
 > Tune in to our podcast on advisor transitions, technology, and the future of wealth management.
 > _[YouTube] [Apple Podcasts] [Spotify]_

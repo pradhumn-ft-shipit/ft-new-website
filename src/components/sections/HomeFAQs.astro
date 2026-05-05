@@ -5,11 +5,11 @@ import FAQItem from "../FAQItem.astro";
 const faqs = [
   {
     q: "How is FastTrackr different from a generic AI tool?",
-    a: `We didn't add a "transition" feature to a general-purpose product. FastTrackr was built for advisor transitions from the start — shaped by consultants and operators who move billions in client assets every year. The system understands the household structures, custodian quirks, and form variations that generic AI tools don't.`,
+    a: `We didn't add a "transition" feature to a general-purpose product. FastTrackr was built for advisor transitions from the start, shaped by consultants and operators who move billions in client assets every year. The system understands the household structures, custodian quirks, and form variations that generic AI tools don't.`,
   },
   {
     q: "Which custodians do you support?",
-    a: "We've built mappings for Fidelity and Schwab today, which together cover roughly 70% of the market. We're actively adding more — and we work with firms to build mappings for any custodian on their roadmap.",
+    aHTML: `We already support the major custodians. If you'd like to know whether yours is covered, <a href="/contact" class="underline hover:text-text-primary">drop us a note</a> and we'll share specifics. If you're a custodian and want to talk about partnership, write to us the same way.`,
   },
   {
     q: "How does FastTrackr handle our firm's specific forms?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "Is our data secure?",
-    a: "Yes. Encryption in transit and at rest, role-based access, and full audit trails. Compliance documentation is available on request — your compliance team can reach out and we'll send the security packet.",
+    a: "Yes. Encryption in transit and at rest, role-based access, and full audit trails. Compliance documentation is available on request, your compliance team can reach out and we'll send the security packet.",
   },
   {
     q: "How fast can we go live?",
-    a: "For most firms, in a matter of days, not months. Setup happens in parallel with your first transition — so you start seeing time saved on day one.",
+    a: "For most firms, in a matter of days, not months. Setup happens in parallel with your first transition, so you start seeing time saved on day one.",
   },
   {
     q: "Can we use just the Meeting Assistant or Document Intelligence module?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "How is FastTrackr priced?",
-    aHTML: `For Advisor Transitions, we price based on the time saved and the additional revenue we help you capture. For other modules, pricing is per-seat. The <a href="/pricing" class="underline hover:text-text-primary">Pricing</a> page has more — or we can walk through it on a call.`,
+    aHTML: `For Advisor Transitions, we price based on the time saved and the additional revenue we help you capture. For other modules, pricing is per-seat. The <a href="/pricing" class="underline hover:text-text-primary">Pricing</a> page has more, or we can walk through it on a call.`,
   },
 ];
 ---

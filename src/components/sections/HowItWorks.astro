@@ -1,26 +1,31 @@
 ---
 import SectionShell from "../SectionShell.astro";
+import ImagePlaceholder from "../ImagePlaceholder.astro";
 
 const steps = [
   {
     n: "01",
     title: "We learn your book",
-    body: "Where you're coming from. Where you're going. Every household, every account, every quirk. Mapped before day one — so nothing surprises you mid-move.",
+    body: "Where you're coming from. Where you're going. Every household, every account, every quirk. Mapped before day one, so nothing surprises you mid-move.",
+    visual: { label: "Book Mapping UI", detail: "Custodian, household, and account graph with edge-case flags." },
   },
   {
     n: "02",
     title: "AI-driven data collection",
-    body: "What used to take days happens in minutes. Clients confirm what we already have — they don't fill out manual forms again. The intake disappears, the experience improves.",
+    body: "What used to take days happens in minutes. Clients confirm what we already have, they don't fill out manual forms again. The intake disappears, the experience improves.",
+    visual: { label: "Client Confirmation Flow", detail: "Pre-filled household summary with one-tap confirm." },
   },
   {
     n: "03",
     title: "Custodian forms, auto-filled",
-    body: "Push directly to your custodian via API where supported. Or get pre-filled forms ready for client signature. Either way — no retyping, no copy-paste between tabs.",
+    body: "Push directly to your custodian via API where supported. Or get pre-filled forms ready for client signature. Either way: no retyping, no copy-paste between tabs.",
+    visual: { label: "Auto-filled Form View", detail: "Side-by-side: source data and the rendered custodian form." },
   },
   {
     n: "04",
     title: "Visibility, end to end",
-    body: "From day one to the final asset transfer. Every household, every step — visible to you, your team, and your clients. No more blind handoffs. No more \"where are we on this one?\"",
+    body: "From day one to the final asset transfer. Every household, every step, visible to you, your team, and your clients. No more blind handoffs. No more \"where are we on this one?\"",
+    visual: { label: "Transition Dashboard", detail: "Status by household, NIGO alerts, projected go-live." },
   },
 ];
 ---
@@ -33,7 +38,7 @@ const steps = [
     </h2>
     <p class="mt-5 text-body-lg text-text-secondary">
       No two books move the same way. The process flexes around your specifics
-      — your book, your custodians, your edge cases.
+     , your book, your custodians, your edge cases.
     </p>
   </div>
 
@@ -62,10 +67,13 @@ const steps = [
             </div>
 
             <div class={visualOrder}>
-              {/* Visual placeholder — abstract panel until product screenshots ship */}
-              <div class="aspect-[4/3] max-w-[540px] rounded-[12px] border border-border-subtle bg-bg-secondary flex items-center justify-center">
-                <span class="text-body-sm text-text-muted">Visual</span>
-              </div>
+              <ImagePlaceholder
+                label={s.visual.label}
+                detail={s.visual.detail}
+                tone={i % 2 === 0 ? "tint" : "secondary"}
+                aspect="video"
+                class="max-w-[540px]"
+              />
             </div>
           </li>
         );

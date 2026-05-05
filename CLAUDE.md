@@ -1,4 +1,4 @@
-# FastTrackr AI Website — Agent Instructions
+# FastTrackr AI Website, Agent Instructions
 
 Pair programmer building the FastTrackr AI marketing site. Multi-page static site, hosted on Vercel.
 
@@ -20,11 +20,11 @@ Pre-implementation. No `package.json`, no framework scaffolded yet, no build/lin
 
 ```
 guideline-copy/
-├── 01-website-structure.md   # Site map, nav, page index — start here
+├── 01-website-structure.md   # Site map, nav, page index, start here
 ├── 02-homepage.md             # Homepage copy + sitewide Header (§0) and Footer (§13)
 ├── 03-icp-pages.md            # 5 "Who We Serve" pages, shared template
 ├── 04-other-pages.md          # Solutions sub-pages, Pricing, About
-└── 06-visuals.md              # Design tokens, type scale, components — source of truth for UI
+└── 06-visuals.md              # Design tokens, type scale, components, source of truth for UI
 
 state/
 ├── plan.md                    # Done, in progress, next. Read first, update always.
@@ -35,8 +35,8 @@ state/
 
 ## Stack
 
-- **Framework:** Astro (preferred) or Next.js with static export. Astro is the cleaner fit — content-heavy, ships near-zero JS, easy component reuse across the ICP pages.
-- **Hosting:** Vercel — Git deploy, preview URLs per branch
+- **Framework:** Astro (preferred) or Next.js with static export. Astro is the cleaner fit, content-heavy, ships near-zero JS, easy component reuse across the ICP pages.
+- **Hosting:** Vercel, Git deploy, preview URLs per branch
 - **Forms:** Vercel serverless function → Resend email to the team. No CRM yet.
 - **Styling:** Tailwind or vanilla CSS with semantic tokens. No CSS-in-JS.
 
@@ -46,7 +46,7 @@ state/
 
 Mobile-first methodology, not mobile-priority. Build base styles for 375px, layer up via media queries. Desktop is fully designed, just built on a mobile foundation. No horizontal scroll ever.
 
-Design tokens (colors, type scale, spacing, components) are defined in `guideline-copy/06-visuals.md` — that file is the source of truth. Don't invent tokens; if one is missing, add it there first, then mirror into `tailwind.config` / `tokens.css`.
+Design tokens (colors, type scale, spacing, components) are defined in `guideline-copy/06-visuals.md`, that file is the source of truth. Don't invent tokens; if one is missing, add it there first, then mirror into `tailwind.config` / `tokens.css`.
 
 **Invoke the `frontend-design` skill before building or restyling any UI.** (Installed globally; no project-local file needed.)
 
@@ -70,7 +70,7 @@ Lighthouse (mobile + desktop) before marking any page done. Static export wherev
 - **Copy is sacred.** Pull from `/guideline-copy`. Don't rewrite, paraphrase, or invent.
 - **No invented testimonials, stats, or logos.**
 - **Every CTA goes to Book a Demo.** Single primary CTA per section. Self-serve sign-up can live behind a smaller link in the footer or pricing page if needed.
-- **Always author SVGs** for icons, decorative shapes, flywheels, and animations — inline as Astro components, not raster `<img>`. Photographs only for testimonial avatars and product screenshots (per `06-visuals.md`).
+- **Always author SVGs** for icons, decorative shapes, flywheels, and animations, inline as Astro components, not raster `<img>`. Photographs only for testimonial avatars and product screenshots (per `06-visuals.md`).
 - Secrets in Vercel env vars, never in code.
 - More than 4 files touched → break into steps.
 - Destructive actions → confirm first.

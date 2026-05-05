@@ -1,14 +1,40 @@
 ---
 import SectionShell from "../SectionShell.astro";
-import StatCard from "../StatCard.astro";
 import FlywheelLoop from "../svg/FlywheelLoop.astro";
 
+/*
+ * §6 Outcomes. Smaller, more visual stat cards (the original 72px Display
+ * felt too dense across four cards in a row). Each card carries a custom
+ * inline SVG keyed to its stat: lightning, calendar-shrink, shield-check,
+ * shield-dollar. Stat number sits at H2 scale instead of Display.
+ */
+
 const stats = [
-  { stat: "75%", label: "Faster", description: "Less admin. More books moved per quarter." },
-  { stat: "Months → Weeks", label: "Cut down", description: "The 90-day timeline gets cut down dramatically." },
-  { stat: "Fewer", label: "NIGOs", description: "Pre-validated, mapped forms. Cleaner submissions." },
-  { stat: "Retained", label: "AUM", description: "Faster close means less attrition during the move." },
-];
+  {
+    stat: "75%",
+    statSuffix: "faster",
+    description: "Less admin. More books moved per quarter.",
+    visual: "lightning",
+  },
+  {
+    stat: "Months",
+    statSuffix: "to weeks",
+    description: "The 90-day timeline gets cut down dramatically.",
+    visual: "compress",
+  },
+  {
+    stat: "Fewer",
+    statSuffix: "NIGOs",
+    description: "Pre-validated, mapped forms. Cleaner submissions.",
+    visual: "shield-check",
+  },
+  {
+    stat: "Retained",
+    statSuffix: "AUM",
+    description: "Faster close means less attrition during the move.",
+    visual: "shield-dollar",
+  },
+] as const;
 ---
 
 <SectionShell bg="secondary" ariaLabelledby="outcomes-heading">
@@ -19,16 +45,50 @@ const stats = [
     </h2>
   </div>
 
-  <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <ul class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
     {
       stats.map((s) => (
-        <StatCard stat={s.stat} label={s.label} description={s.description} />
+        <li class="group/stat relative bg-bg-primary border border-border-subtle rounded-[12px] p-7 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(15,23,42,0.06)]">
+          <div class="text-brand-green">
+            {s.visual === "lightning" && (
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9" aria-hidden="true">
+                <path d="M18 4 L8 18 H15 L13 28 L24 13 H17 L18 4 Z" />
+              </svg>
+            )}
+            {s.visual === "compress" && (
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9" aria-hidden="true">
+                <rect x="4" y="8" width="11" height="18" rx="2" />
+                <rect x="20" y="12" width="8" height="14" rx="2" />
+                <path d="M16.5 17 H20 M19 14 L16.5 17 L19 20" />
+              </svg>
+            )}
+            {s.visual === "shield-check" && (
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9" aria-hidden="true">
+                <path d="M16 4 L26 8 V15 C26 21.5 21.5 25.5 16 28 C10.5 25.5 6 21.5 6 15 V8 L16 4 Z" />
+                <path d="M11 16 L15 20 L21 13" />
+              </svg>
+            )}
+            {s.visual === "shield-dollar" && (
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9" aria-hidden="true">
+                <path d="M16 4 L26 8 V15 C26 21.5 21.5 25.5 16 28 C10.5 25.5 6 21.5 6 15 V8 L16 4 Z" />
+                <path d="M16 11 V21 M19 13 H14.5 A1.5 1.5 0 0 0 14.5 16 H17.5 A1.5 1.5 0 0 1 17.5 19 H13" />
+              </svg>
+            )}
+          </div>
+          <p class="mt-5">
+            <span class="block text-h2 font-bold text-button-primary leading-none">{s.stat}</span>
+            <span class="block mt-1 text-body-sm font-semibold uppercase tracking-[0.08em] text-text-muted">
+              {s.statSuffix}
+            </span>
+          </p>
+          <p class="mt-4 text-body-sm text-text-secondary">{s.description}</p>
+        </li>
       ))
     }
-  </div>
+  </ul>
 
   <p class="mt-16 max-w-[700px] mx-auto text-center text-body-lg italic text-text-secondary">
-    And what doesn't show up in the numbers — calmer advisors, clients who
+    And what doesn't show up in the numbers, calmer advisors, clients who
     barely notice the move, and ops teams that stop dreading next month.
   </p>
 

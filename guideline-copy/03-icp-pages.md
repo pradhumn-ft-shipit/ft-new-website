@@ -1,4 +1,4 @@
-# Who We Serve — ICP Pages
+# Who We Serve, ICP Pages
 
 _All five pages follow the same template: Hero → Their Pain → What FastTrackr Does → Outcomes → Testimonial (where available) → FAQ → CTA._
 
@@ -7,7 +7,7 @@ _Headers below mark page boundaries. Each page is a separate URL._
 ---
 ---
 
-# Page 1 — For Transition Consultants
+# Page 1, For Transition Consultants
 
 **URL:** `/who-we-serve/transition-consultants`
 
@@ -17,7 +17,7 @@ _Headers below mark page boundaries. Each page is a separate URL._
 More deals per consultant. Without more admin slog.
 
 **Subhead:**
-Take on more transitions with the team you already have. FastTrackr handles the data collection, form-filling, and project management — so your consultants spend their time on the parts only humans can do.
+Take on more transitions with the team you already have. FastTrackr handles the data collection, form-filling, and project management, so your consultants spend their time on the parts only humans can do.
 
 **CTA:** Book a Demo
 
@@ -37,11 +37,11 @@ You hire more ops people. The work scales. Your margin doesn't.
 
 We become the operating layer underneath every deal you take on.
 
-**Data collection runs in the background.** AI pulls client and account data from documents, transcripts, and conversations. Your team reviews — they don't transcribe.
+**Data collection runs in the background.** AI pulls client and account data from documents, transcripts, and conversations. Your team reviews, they don't transcribe.
 
 **Forms are pre-filled, mapped, and validated.** Across Fidelity, Schwab, and the firms you work with most. NIGOs drop. Rework drops with them.
 
-**Every household, every account, every status — visible in one place.** Replaces the Excel war room. Your consultants and the advisors they're moving see the same picture.
+**Every household, every account, every status, visible in one place.** Replaces the Excel war room. Your consultants and the advisors they're moving all see the same status, in real time.
 
 **It learns your playbook.** The way your firm handles transitions gets encoded. New consultants ramp faster. Senior consultants take on more.
 
@@ -49,16 +49,16 @@ We become the operating layer underneath every deal you take on.
 
 ## Outcomes
 
-- **75% less admin per deal** — same team, more books moved
-- **Higher CSAT from advisors** — the experience improves
-- **Faster custodial empanelment** — clean submissions move quicker
-- **More deals per consultant** — capacity stops being the ceiling
+- **75% less admin per deal**, same team, more books moved
+- **Higher CSAT from advisors**, the experience improves
+- **Faster custodial empanelment**, clean submissions move quicker
+- **More deals per consultant**, capacity stops being the ceiling
 
 ---
 
 ## How firms are using us today
 
-> This is the smoothest transition anyone in our circle has seen or heard about. It aligned with our workflow, and it just worked. We had planned for a month — we finished in two weeks. Amazing tool, very intuitive to use.
+> This is the smoothest transition anyone in our circle has seen or heard about. It aligned with our workflow, and it just worked. We had planned for a month, we finished in two weeks. Amazing tool, very intuitive to use.
 >
 > **Cana Wealth Advisors**
 
@@ -72,13 +72,13 @@ _[Optional: design partner case study, when ready to publish.]_
 We support co-branded and white-label experiences depending on the engagement. Talk to us about what fits your firm.
 
 **Do you work across multiple custodians?**
-Yes. We have mappings for Fidelity and Schwab today (~70% of the market) and add new ones based on customer roadmaps.
+Yes. We work with the major custodians and can support your transition end to end. If you'd like to walk through your specific custodian setup, book a quick 30-minute call and we'll cover it.
 
-**What about our existing tooling — do we replace it?**
+**What about our existing tooling, do we replace it?**
 No. FastTrackr sits alongside what you have today and pulls it together. We integrate with common CRMs, e-signature platforms, and custodial portals.
 
 **How do you price for consultants?**
-Value-based — usually tied to the deals we help you move and the time we save you. We'll talk through the structure on a call.
+Value-based, usually tied to the deals we help you move and the time we save you. We'll talk through the structure on a call.
 
 ---
 
@@ -90,7 +90,7 @@ Value-based — usually tied to the deals we help you move and the time we save 
 ---
 ---
 
-# Page 2 — For Breakaway Advisors
+# Page 2, For Breakaway Advisors
 
 **URL:** `/who-we-serve/breakaway-advisors`
 
@@ -108,11 +108,11 @@ You decided to move to build something better. Don't let the repapering be the t
 
 ## The pain
 
-You've built the relationships. You've made the call. You're going independent — or joining a firm that's actually built for you.
+You've built the relationships. You've made the call. You're going independent, or joining a firm that's actually built for you.
 
 Then you discover what repapering actually looks like.
 
-Ninety days. Hundreds of forms. Account applications, transfer-of-asset forms, feature forms — for every household, sometimes for every account. Your assistant is buried. Your weekends are gone. Some clients drift in the silence between "we're moving" and "we're done." A few don't come with you.
+Ninety days. Hundreds of forms. Account applications, transfer-of-asset forms, feature forms, for every household, sometimes for every account. Your assistant is buried. Your weekends are gone. Some clients drift in the silence between "we're moving" and "we're done." A few don't come with you.
 
 The transition isn't the part anyone tells you about when they sell you on independence. It's the part that almost makes you reconsider.
 
@@ -134,26 +134,26 @@ We do the parts that grind. You do the parts that matter.
 
 ## Outcomes
 
-- **Move in weeks, not months** — get to revenue at your new firm faster
-- **Keep your team intact** — transition doesn't have to mean burnout
-- **Retain more clients** — a smoother experience means more of them follow
-- **Look professional** — clients remember how the move felt
+- **Move in weeks, not months**, get to revenue at your new firm faster
+- **Keep your team intact**, transition doesn't have to mean burnout
+- **Retain more clients**, a smoother experience means more of them follow
+- **Look professional**, clients remember how the move felt
 
 ---
 
 ## FAQ
 
 **Do we need our new firm to bring you in, or can we use FastTrackr directly?**
-Both. Some firms have partnered with us already. If yours hasn't, you can still bring us in directly for your transition — we work with the advisor, the new firm, and the custodian.
+Both. Some firms have partnered with us already. If yours hasn't, you can still bring us in directly for your transition, we work with the advisor, the new firm, and the custodian.
 
 **Which custodians do you support?**
-Fidelity and Schwab today (~70% of the market). More coming. If your destination custodian isn't covered, talk to us — we can work it in.
+We work with the major custodians and can support your transition end to end. If your destination custodian is non-standard, book a 30-minute call and we'll walk through your specific case.
 
 **What if my Broker Protocol or non-Protocol situation is complex?**
-We don't handle the legal side, but we work with your transition consultant or counsel to make sure the operational workflow lines up with whatever your protocol situation requires.
+We support both Protocol and non-Protocol moves. Firms running either type with FastTrackr have seen exponential time savings and material retention gains, our system was built to handle the variations on either side.
 
 **How long until we go live?**
-For most advisors, days. Setup runs in parallel with your transition prep — so by the time you're ready to start contacting clients, the system is ready too.
+For most advisors, days. Setup runs in parallel with your transition prep, so by the time you're ready to start contacting clients, the system is ready too.
 
 ---
 
@@ -165,7 +165,7 @@ For most advisors, days. Setup runs in parallel with your transition prep — so
 ---
 ---
 
-# Page 3 — For Acquisitive RIAs
+# Page 3, For Acquisitive RIAs
 
 **URL:** `/who-we-serve/acquisitive-rias`
 
@@ -195,7 +195,7 @@ By the time the last account is moved, the next acquisition is already in motion
 
 We turn integration from a months-long ops project into a repeatable, weeks-long process.
 
-**Each acquisition runs through the same engine.** Data collection, mapping, form-filling, project management — standardized across deals. The first one is the slowest. Every one after is faster.
+**Each acquisition runs through the same engine.** Data collection, mapping, form-filling, project management, standardized across deals. The first one is the slowest. Every one after is faster.
 
 **AUM is protected during the transition window.** Faster moves mean less time for clients to wonder, drift, or leave.
 
@@ -207,10 +207,10 @@ We turn integration from a months-long ops project into a repeatable, weeks-long
 
 ## Outcomes
 
-- **Integration timelines cut dramatically** — months to weeks
-- **Less AUM lost during the move** — protect what you paid for
-- **Faster path to deal-level revenue** — synergies show up sooner
-- **More deals per year** — ops capacity stops being the bottleneck
+- **Integration timelines cut dramatically**, months to weeks
+- **Less AUM lost during the move**, protect what you paid for
+- **Faster path to deal-level revenue**, synergies show up sooner
+- **More deals per year**, ops capacity stops being the bottleneck
 
 ---
 
@@ -220,12 +220,12 @@ We turn integration from a months-long ops project into a repeatable, weeks-long
 Yes. Each acquisition is its own workspace inside FastTrackr. Your team sees them all in one view.
 
 **How does this fit with our internal integration playbook?**
-We don't replace the playbook — we run on top of it. Your sequencing, your communication templates, your client experience standards stay yours. We handle the operational layer underneath.
+We don't replace the playbook, we run on top of it. Your sequencing, your communication templates, your client experience standards stay yours. We handle the operational layer underneath.
 
 **What's the ROI math?**
 Usually two-fold: time saved by your ops team plus AUM protected during the transition window. We'll model it for your specific deal flow on a call.
 
-**Do you support sub-acquisition complexity — multi-custodian moves, partial book lifts, advisor-level breakaways inside a deal?**
+**Do you support sub-acquisition complexity, multi-custodian moves, partial book lifts, advisor-level breakaways inside a deal?**
 Yes. The system was designed for the variations.
 
 ---
@@ -238,7 +238,7 @@ Yes. The system was designed for the variations.
 ---
 ---
 
-# Page 4 — For Independent Broker-Dealers
+# Page 4, For Independent Broker-Dealers
 
 **URL:** `/who-we-serve/independent-broker-dealers`
 
@@ -262,13 +262,13 @@ Then they ask the question that actually decides it: _what does the move look li
 
 Today, that's where most BDs lose. Repapering takes months. Forms come back NIGO. Advisors get pulled into operational work that has nothing to do with what they signed up for. Their teams burn out before they're even fully on your platform. Some take less money to go somewhere the move feels easier.
 
-The transition experience isn't a back-office concern. It's a recruiting weapon — and right now, most firms aren't using it.
+The transition experience isn't a back-office concern. It's a recruiting weapon, and right now, most firms aren't using it.
 
 ---
 
 ## What FastTrackr does for independent broker-dealers
 
-We make the transition into your firm the easiest in the industry — and we make it visible to the advisors you're recruiting.
+We make the transition into your firm the easiest in the industry, and we make it visible to the advisors you're recruiting.
 
 **A purpose-built onboarding workflow for incoming advisors.** Pre-filled forms. Validated submissions. End-to-end visibility.
 
@@ -282,10 +282,10 @@ We make the transition into your firm the easiest in the industry — and we mak
 
 ## Outcomes
 
-- **Better recruiting outcomes** — close more advisors against firms with rougher onboarding
-- **Faster ramp** — incoming advisors generate revenue sooner
-- **Less recruiter time on logistics** — recruiters recruit, ops handles ops
-- **Higher advisor satisfaction in year one** — the experience starts well, and that sticks
+- **Better recruiting outcomes**, close more advisors against firms with rougher onboarding
+- **Faster ramp**, incoming advisors generate revenue sooner
+- **Less recruiter time on logistics**, recruiters recruit, ops handles ops
+- **Higher advisor satisfaction in year one**, the experience starts well, and that sticks
 
 ---
 
@@ -297,7 +297,7 @@ Yes. The experience can be branded as part of your firm's onboarding.
 **How does this integrate with our home office systems?**
 We integrate with common CRMs, e-signature platforms, and the custodial relationships you already have. Setup is a matter of configuration, not platform replacement.
 
-**What about advisors with complex book structures — multi-custodian, mixed registered/non-registered, equity comp, etc.?**
+**What about advisors with complex book structures, multi-custodian, mixed registered/non-registered, equity comp, etc.?**
 Built for it. The system was designed by people who've moved exactly these books.
 
 **How does pricing work for BDs?**
@@ -313,7 +313,7 @@ Enterprise pricing tied to advisor volume and transition outcomes. Talk to us ab
 ---
 ---
 
-# Page 5 — For Custodians
+# Page 5, For Custodians
 
 **URL:** `/who-we-serve/custodians`
 
@@ -333,7 +333,7 @@ You want to attract more advisors and practices to your platform. Today, the onb
 
 You're competing for advisor practices. The platform is ready. The pricing is competitive. The team is hungry.
 
-But the actual experience of moving to your platform? That's owned by RIAs, BDs, and transition consultants — and the quality varies wildly. Some practices arrive smoothly. Others arrive bruised, and they remember.
+But the actual experience of moving to your platform? That's owned by RIAs, BDs, and transition consultants, and the quality varies wildly. Some practices arrive smoothly. Others arrive bruised, and they remember.
 
 Word travels fast in advisor circles. "Going to [Custodian X] was painful" lives longer in conversation than any marketing campaign you'll run this year.
 
@@ -345,20 +345,20 @@ We help your advisors grow faster, acquire better, and onboard onto your platfor
 
 **Embed in custodial onboarding.** FastTrackr becomes the operational layer for any RIA or practice moving to your platform.
 
-**Branded experience.** Co-branded or white-labeled — the move feels like your platform, not a third party.
+**Branded experience.** Co-branded or white-labeled, the move feels like your platform, not a third party.
 
 **Help your advisors win their own deals.** Advisors and RIAs on your platform get the same transition tooling for their breakaways and acquisitions. They grow faster. Their AUM grows faster. So does yours.
 
-**Visibility into your incoming book.** See practices in transit, status by household, projected go-live dates — all in one place.
+**Visibility into your incoming book.** See practices in transit, status by household, projected go-live dates, all in one place.
 
 ---
 
 ## Outcomes
 
-- **More practices onboarded** — easier moves drive word-of-mouth
-- **Faster asset growth on your platform** — advisors hit productivity sooner
-- **Better experience for your existing advisors** — they grow faster, you grow with them
-- **Stronger differentiation in the custodian race** — operational excellence as a moat
+- **More practices onboarded**, easier moves drive word-of-mouth
+- **Faster asset growth on your platform**, advisors hit productivity sooner
+- **Better experience for your existing advisors**, they grow faster, you grow with them
+- **Stronger differentiation in the custodian race**, operational excellence as a moat
 
 ---
 

@@ -1,0 +1,77 @@
+---
+/*
+ * Used wherever a real product image will eventually go (How-It-Works step
+ * panels, customer screenshots, hero visuals). Renders a colored card with a
+ * big clear label saying *what kind* of image is expected, so a designer
+ * dropping in the real asset knows exactly what slot it fills.
+ *
+ * Tones rotate through brand-tinted backgrounds with strong contrast so the
+ * placeholder reads at a glance and never feels like a missing image.
+ */
+type Tone = "tint" | "ink" | "secondary" | "navy";
+type Aspect = "video" | "square" | "wide" | "portrait";
+
+interface Props {
+  label: string;
+  detail?: string;
+  tone?: Tone;
+  aspect?: Aspect;
+  class?: string;
+}
+
+const {
+  label,
+  detail,
+  tone = "tint",
+  aspect = "video",
+  class: className = "",
+} = Astro.props;
+
+const toneClass: Record<Tone, string> = {
+  tint: "bg-bg-tint text-button-primary border-brand-green/30",
+  ink: "bg-button-primary text-button-text border-button-primary",
+  secondary: "bg-bg-secondary text-text-primary border-border-strong",
+  navy: "bg-text-primary text-bg-primary border-text-primary",
+};
+
+const aspectClass: Record<Aspect, string> = {
+  video: "aspect-[16/10]",
+  square: "aspect-square",
+  wide: "aspect-[21/9]",
+  portrait: "aspect-[3/4]",
+};
+
+const accent =
+  tone === "ink" || tone === "navy"
+    ? "text-brand-green"
+    : "text-brand-green";
+---
+
+<div
+  role="img"
+  aria-label={`Image placeholder: ${label}${detail ? `, ${detail}` : ""}`}
+  class={`relative overflow-hidden rounded-[12px] border-2 border-dashed ${aspectClass[aspect]} ${toneClass[tone]} ${className}`}
+>
+  <!-- Decorative cross-hatch so the panel doesn't feel flat -->
+  <span
+    aria-hidden="true"
+    class="absolute inset-0 opacity-[0.07] bg-[repeating-linear-gradient(45deg,currentColor_0_1px,transparent_1px_14px)]"
+  ></span>
+
+  <!-- Corner tag -->
+  <span
+    aria-hidden="true"
+    class={`absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-bg-primary/80 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] ${accent}`}
+  >
+    <span class="block w-1.5 h-1.5 rounded-full bg-current"></span>
+    Placeholder
+  </span>
+
+  <!-- Centered label -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+    <p class="text-h3 md:text-h2 font-bold leading-tight">{label}</p>
+    {detail && (
+      <p class="mt-3 max-w-[36ch] text-body-sm md:text-body opacity-80">{detail}</p>
+    )}
+  </div>
+</div>

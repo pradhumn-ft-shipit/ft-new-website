@@ -1,0 +1,87 @@
+---
+/*
+ * Abstract "process friction" illustration used in the Pain section across
+ * all ICP pages and a few Solutions pages. Conveys: stacked paperwork, a
+ * rejection event (NIGO), and a backwards loop indicating rework.
+ *
+ * Shared across ICPs because the underlying pain shape is the same. Color
+ * is muted base + a single brand-green accent on the rejection marker, so
+ * it sits next to body copy without screaming for attention.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 480 480"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  aria-hidden="true"
+  class={`w-full h-auto ${className}`}
+>
+  <!-- Faint dotted grid background -->
+  <defs>
+    <pattern id="pain-dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="var(--color-border-subtle)" />
+    </pattern>
+    <filter id="pain-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(15,23,42,0.07)"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="480" height="480" fill="url(#pain-dots)" opacity="0.7"/>
+
+  <!-- Ghost backwards arrow loop, suggesting rework -->
+  <g stroke="var(--color-text-muted)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.45">
+    <path d="M380 170 A120 120 0 1 1 110 240" stroke-dasharray="3 6"/>
+    <path d="M118 232 L108 240 L116 252" />
+  </g>
+
+  <!-- Form 3 (back, most rotated) -->
+  <g transform="translate(230 90) rotate(-12)" filter="url(#pain-soft)" opacity="0.6">
+    <rect width="200" height="260" rx="12" fill="var(--color-bg-primary)" stroke="var(--color-border-strong)" stroke-width="1.25"/>
+    <path d="M24 40 H176 M24 60 H160 M24 80 H140 M24 110 H176 M24 130 H150 M24 160 H170 M24 180 H120 M24 210 H160 M24 230 H100" stroke="var(--color-border-subtle)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Form 2 (middle) -->
+  <g transform="translate(160 70) rotate(-4)" filter="url(#pain-soft)">
+    <rect width="200" height="260" rx="12" fill="var(--color-bg-primary)" stroke="var(--color-border-strong)" stroke-width="1.5"/>
+    <path d="M24 40 H176 M24 60 H160 M24 80 H120 M24 110 H176 M24 130 H140" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <!-- Highlighted required field -->
+    <rect x="22" y="148" width="156" height="22" rx="4" stroke="var(--color-brand-green)" stroke-width="1.5" fill="var(--color-brand-green)" fill-opacity="0.05"/>
+    <path d="M24 200 H170 M24 220 H100" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Form 1 (front) -->
+  <g transform="translate(90 110) rotate(6)" filter="url(#pain-soft)">
+    <rect width="200" height="260" rx="12" fill="var(--color-bg-primary)" stroke="var(--color-text-primary)" stroke-width="1.5"/>
+    <path d="M24 40 H176 M24 60 H160 M24 80 H140" stroke="var(--color-text-primary)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <path d="M24 110 H176 M24 130 H120 M24 160 H170 M24 180 H100 M24 210 H160 M24 230 H80" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- NIGO / rejection stamp on the front form -->
+  <g transform="translate(310 250) rotate(-8)">
+    <circle r="44" fill="var(--color-bg-primary)" stroke="var(--color-brand-green)" stroke-width="2"/>
+    <text
+      x="0" y="-2"
+      text-anchor="middle"
+      font-family="var(--font-sans)"
+      font-size="13"
+      font-weight="700"
+      letter-spacing="0.12em"
+      fill="var(--color-brand-green)"
+    >NIGO</text>
+    <text
+      x="0" y="16"
+      text-anchor="middle"
+      font-family="var(--font-sans)"
+      font-size="9"
+      font-weight="600"
+      letter-spacing="0.18em"
+      fill="var(--color-brand-green)"
+      opacity="0.7"
+    >RESEND</text>
+  </g>
+</svg>

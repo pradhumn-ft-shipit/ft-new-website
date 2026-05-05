@@ -1,35 +1,122 @@
 ---
 /*
- * §2 Social proof bar. Logos must be cleared before going live — until they
- * are, this renders as text placeholders so we don't ship an empty grid or
- * fake brands. CMS will populate the real list.
+ * §2 Social proof bar. Real partner logos from /public/partners, rendered as
+ * an infinite horizontal marquee that pauses on hover. Logos are grayscaled
+ * + dimmed by default (per 06-visuals §2 monochrome treatment) and pop to
+ * full color individually on hover.
  *
- * Copy: "Shaped by advisors and operators at" — verbatim from
- * guideline-copy/02-homepage.md §2.
+ * Marquee technique: two identical logo lists side-by-side inside a flex
+ * container; the container translates from 0 → -50% in a linear loop. No JS.
  */
 
-const placeholders = [
-  "Logo One",
-  "Logo Two",
-  "Logo Three",
-  "Logo Four",
-  "Logo Five",
-  "Logo Six",
+const logos = [
+  { src: "/partners/fidelity-logo-jpg.webp", alt: "Fidelity", w: 140, h: 32 },
+  { src: "/partners/charles-schwab.svg", alt: "Charles Schwab", w: 160, h: 32 },
+  { src: "/partners/LPL_Financial-Logo.wine.svg", alt: "LPL Financial", w: 150, h: 36 },
+  { src: "/partners/NewEdge_Advisors_Black_Logo.jpg", alt: "NewEdge Advisors", w: 150, h: 32 },
+  { src: "/partners/advizorstack-logo.svg", alt: "AdvizorStack", w: 130, h: 36 },
 ];
 ---
 
-<section class="bg-bg-secondary section-y-sm">
-  <div class="container-site text-center">
-    <p class="text-eyebrow text-text-muted">Shaped by advisors and operators at</p>
-    <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-6 items-center justify-items-center">
-      {
-        placeholders.map((name) => (
-          <li
-            aria-hidden="true"
-            class="text-body-sm font-semibold tracking-wide text-text-muted opacity-70 select-none"
-          >{name}</li>
+<section class="bg-bg-secondary section-y-sm overflow-hidden" aria-labelledby="social-proof-eyebrow">
+  <div class="container-site">
+    <p id="social-proof-eyebrow" class="text-eyebrow text-text-muted text-center">
+      Shaped by advisors and operators at
+    </p>
+  </div>
+
+  <div class="mt-8 marquee" role="list" aria-label="Partner logos">
+    <div class="marquee-track">
+      {[0, 1].map((copy) =>
+        logos.map((logo) => (
+          <div
+            role={copy === 0 ? "listitem" : "presentation"}
+            aria-hidden={copy === 1 ? "true" : undefined}
+            class="marquee-cell"
+          >
+            <img
+              src={logo.src}
+              alt={copy === 0 ? logo.alt : ""}
+              width={logo.w}
+              height={logo.h}
+              loading="lazy"
+              decoding="async"
+              class="marquee-logo"
+              style={`max-height:${logo.h}px`}
+            />
+          </div>
         ))
-      }
-    </ul>
+      )}
+    </div>
   </div>
 </section>
+
+<style>
+  .marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Soft fade at the edges so logos don't snap in/out */
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 38s linear infinite;
+  }
+
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-cell {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2.5rem;
+    min-width: 180px;
+    height: 56px;
+  }
+
+  .marquee-logo {
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.4) opacity(0.6);
+    transition: filter 200ms ease;
+  }
+
+  .marquee-cell:hover .marquee-logo,
+  .marquee-cell:focus-within .marquee-logo {
+    filter: none;
+  }
+
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+</style>

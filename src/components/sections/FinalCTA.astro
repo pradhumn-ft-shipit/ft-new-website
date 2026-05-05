@@ -4,13 +4,11 @@ import Button from "../Button.astro";
 interface Props {
   headline?: string;
   subhead?: string;
-  email?: string;
 }
 
 const {
   headline = "Let's reimagine how your next transition feels.",
   subhead = "A 20-minute walkthrough is enough to show you whether this works for your book.",
-  email = "vineet@fasttrackr.ai",
 } = Astro.props;
 ---
 
@@ -21,7 +19,8 @@ const {
     <div class="mt-10 flex flex-col items-center gap-3">
       <Button href="/contact" variant="primary" size="lg">Book a Demo</Button>
       <p class="text-body-sm text-text-secondary">
-        Or email <a class="underline hover:text-text-primary" href={`mailto:${email}`}>{email}</a>
+        Prefer to write first?
+        <a class="underline hover:text-text-primary" href="/contact">Send us a note</a>.
       </p>
     </div>
   </div>

@@ -1,51 +1,41 @@
 ---
+/*
+ * FastTrackr AI wordmark. Real brand asset (PNG) shipped from /public/brand
+ * so it's served as a static file with long-cache headers (vercel.json
+ * pins /_astro/* to immutable; the brand assets get default cache).
+ *
+ * `eager` + `fetchpriority="high"` so the header doesn't flash blank during
+ * first paint. Explicit width/height prevents CLS.
+ */
 interface Props {
   class?: string;
   height?: number;
+  variant?: "wordmark" | "mark";
+  eager?: boolean;
 }
-const { class: className = "", height = 28 } = Astro.props;
+
+const {
+  class: className = "",
+  height = 28,
+  variant = "wordmark",
+  eager = false,
+} = Astro.props;
+
+const intrinsic = variant === "wordmark" ? { w: 657, h: 141 } : { w: 150, h: 150 };
+const renderedWidth = Math.round((height * intrinsic.w) / intrinsic.h);
+const src = variant === "wordmark"
+  ? "/brand/fasttrackr-wordmark.png"
+  : "/brand/fasttrackr-mark.png";
 ---
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 200 32"
+<img
+  src={src}
+  alt="FastTrackr AI"
+  width={renderedWidth}
   height={height}
-  width={(height * 200) / 32}
-  class={className}
-  role="img"
-  aria-label="FastTrackr AI"
->
-  <rect x="0" y="0" width="32" height="32" rx="6" fill="var(--color-button-primary)" />
-  <path
-    d="M8 22 L8 10 M8 10 L20 10 M8 16 L17 16"
-    stroke="var(--color-brand-green)"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    fill="none"
-  />
-  <path
-    d="M22 16 L26 12 M22 16 L26 20 M22 16 L29 16"
-    stroke="var(--color-brand-green)"
-    stroke-width="2"
-    stroke-linecap="round"
-    fill="none"
-  />
-  <text
-    x="42"
-    y="22"
-    font-family="var(--font-sans)"
-    font-size="18"
-    font-weight="700"
-    fill="var(--color-text-primary)"
-    letter-spacing="-0.01em"
-  >FastTrackr</text>
-  <text
-    x="155"
-    y="22"
-    font-family="var(--font-sans)"
-    font-size="18"
-    font-weight="700"
-    fill="var(--color-brand-green)"
-    letter-spacing="-0.01em"
-  >AI</text>
-</svg>
+  loading={eager ? "eager" : "lazy"}
+  decoding="async"
+  fetchpriority={eager ? "high" : "auto"}
+  class={`block h-auto w-auto ${className}`}
+  style={`height:${height}px`}
+/>

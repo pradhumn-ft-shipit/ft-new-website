@@ -13,7 +13,7 @@
  * silently 200s — bots don't get to learn the difference.
  */
 
-const TO = process.env.DEMO_FORM_TO || "vineet@fasttrackr.ai";
+const TO = process.env.DEMO_FORM_TO || "hello@fasttrackr.ai";
 const FROM = process.env.DEMO_FORM_FROM || "FastTrackr Demo <noreply@fasttrackr.ai>";
 
 async function readBody(req) {
@@ -83,6 +83,7 @@ export default async function handler(req, res) {
   const firm = String(body.firm || "").trim();
   const role = String(body.role || "").trim();
   const message = String(body.message || "").trim();
+  const preferredTimes = String(body.preferredTimes || "").trim();
 
   const errors = [];
   if (!name) errors.push("name");
@@ -113,23 +114,25 @@ export default async function handler(req, res) {
     return;
   }
 
-  const subject = `Demo request — ${name}${firm ? ` (${firm})` : ""}`;
+  const subject = `Demo request: ${name}${firm ? ` (${firm})` : ""}`;
   const html = `
     <h2>New Book-a-Demo request</h2>
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-    <p><strong>Firm:</strong> ${escapeHtml(firm) || "—"}</p>
-    <p><strong>Role:</strong> ${escapeHtml(role) || "—"}</p>
+    <p><strong>Firm:</strong> ${escapeHtml(firm) || "&mdash;"}</p>
+    <p><strong>Role:</strong> ${escapeHtml(role) || "&mdash;"}</p>
+    <p><strong>Preferred times:</strong> ${escapeHtml(preferredTimes) || "&mdash;"}</p>
     <p><strong>Message:</strong></p>
-    <pre style="white-space:pre-wrap;font-family:inherit">${escapeHtml(message) || "—"}</pre>
+    <pre style="white-space:pre-wrap;font-family:inherit">${escapeHtml(message) || "&mdash;"}</pre>
   `;
   const text =
     `New Book-a-Demo request\n\n` +
     `Name: ${name}\n` +
     `Email: ${email}\n` +
-    `Firm: ${firm || "—"}\n` +
-    `Role: ${role || "—"}\n` +
-    `Message:\n${message || "—"}\n`;
+    `Firm: ${firm || "-"}\n` +
+    `Role: ${role || "-"}\n` +
+    `Preferred times: ${preferredTimes || "-"}\n` +
+    `Message:\n${message || "-"}\n`;
 
   try {
     const resp = await fetch("https://api.resend.com/emails", {

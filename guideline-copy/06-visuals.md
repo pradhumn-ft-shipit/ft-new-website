@@ -1,6 +1,6 @@
 # Visual Design Guide
 
-_Visual specifications for the FastTrackr AI website. Light theme, dark fonts, very dark green for buttons. Clean, professional, B2B-conservative. This document is the source of truth for visual decisions — copy lives in the other markdown files; this one tells you how to render it._
+_Visual specifications for the FastTrackr AI website. Light theme, dark fonts, very dark green for buttons. Clean, professional, B2B-conservative. This document is the source of truth for visual decisions, copy lives in the other markdown files; this one tells you how to render it._
 
 ---
 
@@ -36,7 +36,7 @@ _Visual specifications for the FastTrackr AI website. Light theme, dark fonts, v
 | `border-subtle` | `#E2E8F0` | Card borders, dividers |
 | `border-strong` | `#CBD5E1` | Form inputs, accordions |
 
-**Rule of thumb:** 90% of the page is `bg-primary` + `text-primary`/`text-secondary`. Brand green is an accent, not a wash. Dark green buttons are the only dense color application — they should feel intentional.
+**Rule of thumb:** 90% of the page is `bg-primary` + `text-primary`/`text-secondary`. Brand green is an accent, not a wash. Dark green buttons are the only dense color application, they should feel intentional.
 
 ### 1.2 Typography
 
@@ -66,7 +66,7 @@ _Visual specifications for the FastTrackr AI website. Light theme, dark fonts, v
 - Section vertical padding: **120px top + bottom** (desktop), **64px** (mobile).
 - Card internal padding: **32px** (desktop), **24px** (mobile).
 - Grid gap between cards: **24px** standard, **16px** for tight grids.
-- Gap between Hero and first scroll section: large (160px+) — let the hero breathe.
+- Gap between Hero and first scroll section: large (160px+), let the hero breathe.
 
 ### 1.4 Buttons
 
@@ -74,7 +74,7 @@ _Visual specifications for the FastTrackr AI website. Light theme, dark fonts, v
 - Background: `button-primary` (#0A3D2E)
 - Text: white, 16px, weight 600
 - Padding: 14px vertical, 28px horizontal
-- Border radius: 8px (or 999px for fully rounded — pick one and stay consistent)
+- Border radius: 8px (or 999px for fully rounded, pick one and stay consistent)
 - Hover: `button-hover` background, subtle scale 1.02
 - No shadow at rest; subtle shadow on hover
 
@@ -101,7 +101,7 @@ Across the site there should be **one** primary CTA per section maximum. Multipl
 - Hover (where clickable): subtle lift (translate-y –2px) + shadow `0 4px 16px rgba(15,23,42,0.06)`
 
 **Stat card** (used in Outcomes section)
-- Same as default but stat number is the focal point — see §6.
+- Same as default but stat number is the focal point, see §6.
 
 **ICP card** (used in §7)
 - Default card + small icon + arrow link footer.
@@ -118,7 +118,7 @@ Across the site there should be **one** primary CTA per section maximum. Multipl
 
 - **Photographs:** only for testimonial avatars (people), team shots on About page. Crop to circle. ~80px diameter.
 - **Product screenshots:** clean, framed in a subtle browser-chrome wrapper (rounded corners, light gray header bar). Max width 1100px in section.
-- **Illustrations:** minimal. If used, abstract/geometric shapes only — never characters or scenes.
+- **Illustrations:** minimal. If used, abstract/geometric shapes only, never characters or scenes.
 
 ### 1.8 Mobile
 
@@ -145,7 +145,7 @@ Section numbers match `02-homepage.md`.
 **Content alignment:**
 - Logo: left (24px from edge)
 - Nav links: center-right
-- CTA "Book a Demo": far right (primary button, but slightly smaller — 12px/24px padding)
+- CTA "Book a Demo": far right (primary button, but slightly smaller, 12px/24px padding)
 
 **Dropdowns:** open on hover (desktop) and tap (mobile). Dropdown panel has white bg, subtle shadow, 16px padding, 240px min-width. Each item: 12px padding, hover background `bg-secondary`.
 
@@ -157,22 +157,22 @@ Section numbers match `02-homepage.md`.
 
 ### §1. HERO
 
-**Layout:** Full-width with 1280px container, content **left-aligned** (matches the current site's centered approach OR shift to left-aligned for a more modern editorial feel — recommend **left-aligned** with content occupying ~60% of container width).
+**Layout:** Full-width with 1280px container, content **left-aligned** (matches the current site's centered approach OR shift to left-aligned for a more modern editorial feel, recommend **left-aligned** with content occupying ~60% of container width).
 
 **Background:** Pure white `bg-primary`. Optional: very subtle radial gradient or geometric shape in the upper-right, brand-green at 5% opacity, to add interest without distraction. Keep it abstract.
 
 **Vertical spacing:** 120px top padding, content occupies ~70vh.
 
 **Content stack (top to bottom):**
-1. Optional eyebrow text — "FOR ADVISOR TRANSITIONS" — small, brand-green, uppercase, 8px below it
-2. Headline — Display style, max 2 lines
+1. Optional eyebrow text, "FOR ADVISOR TRANSITIONS", small, brand-green, uppercase, 8px below it
+2. Headline, Display style, max 2 lines
 3. 24px gap
-4. Subhead — Body Large, max 2 lines, `text-secondary`
+4. Subhead, Body Large, max 2 lines, `text-secondary`
 5. 40px gap
 6. Primary CTA "Book a Demo"
 7. Inline 24px right of CTA: secondary link "See how it works ↓"
 
-**Hero visual element (right side, optional):** A subtle product mockup or abstract shape. Recommend **launching without a hero image** — typography alone, more whitespace. This matches modern B2B SaaS (Linear, Vercel, etc.) and avoids fake screenshots.
+**Hero visual element (right side, optional):** A subtle product mockup or abstract shape. Recommend **launching without a hero image**, typography alone, more whitespace. This matches modern B2B SaaS (Linear, Vercel, etc.) and avoids fake screenshots.
 
 **Mobile:** Center-aligned, smaller type per scale. Stack CTA on its own row, full-width or auto-width.
 
@@ -184,15 +184,15 @@ Section numbers match `02-homepage.md`.
 **Padding:** 48px vertical.
 
 **Content stack:**
-1. Eyebrow text (centered): "Shaped by advisors and operators at" — `text-muted`, 13px, weight 500
+1. Eyebrow text (centered): "Shaped by advisors and operators at", `text-muted`, 13px, weight 500
 2. 24px gap
-3. Logo strip — 5–7 logos, evenly spaced, centered
+3. Logo strip, 5–7 logos, evenly spaced, centered
 
 **Logo treatment:**
-- Convert all logos to **monochrome** — `text-muted` (#94A3B8) or pure grayscale at 70% opacity
+- Convert all logos to **monochrome**, `text-muted` (#94A3B8) or pure grayscale at 70% opacity
 - Max height: 40px each. Width auto.
 - On hover (if linked): full-color version
-- Equal visual weight — scale logos so no single one dominates
+- Equal visual weight, scale logos so no single one dominates
 
 **Mobile:** Logos in a 2 or 3-column grid, smaller (32px max height), still monochrome.
 
@@ -205,8 +205,8 @@ Section numbers match `02-homepage.md`.
 
 **Section header (top):**
 1. Optional eyebrow: "THE PROBLEM" or "WHAT'S BROKEN"
-2. H2 headline — left-aligned or centered (recommend **centered** for thematic sections, **left-aligned** for product sections)
-3. Subhead — Body Large, max 70 characters wide, `text-secondary`
+2. H2 headline, left-aligned or centered (recommend **centered** for thematic sections, **left-aligned** for product sections)
+3. Subhead, Body Large, max 70 characters wide, `text-secondary`
 4. 64px gap before cards
 
 **Pain card grid:** 6 cards, **3 columns × 2 rows** on desktop, 2×3 on tablet, 1×6 on mobile. Gap: 24px.
@@ -219,9 +219,9 @@ Section numbers match `02-homepage.md`.
 - **Top of card:** large stat or short phrase (the bold opener like "90 days. Sometimes longer.") rendered in **H3 size**, `text-primary`
 - 16px gap
 - Description: Body, `text-secondary`
-- **No icons** in these cards — let the bold opener be the focal point. Adding icons would clutter.
+- **No icons** in these cards, let the bold opener be the focal point. Adding icons would clutter.
 
-**Optional accent:** small dot or short colored bar (4px × 32px) at top-left of each card in `text-muted` — adds rhythm without color overload.
+**Optional accent:** small dot or short colored bar (4px × 32px) at top-left of each card in `text-muted`, adds rhythm without color overload.
 
 **Hover:** Subtle lift + shadow.
 
@@ -239,7 +239,7 @@ Section numbers match `02-homepage.md`.
 **Three capability blocks:** **3 columns** desktop, stack on mobile.
 
 **Each block:**
-- No card border — this is a more open, "feature row" style
+- No card border, this is a more open, "feature row" style
 - Icon (32px, line-style, brand-green) at top
 - 16px gap
 - H3 title (Data Collection / Documentation / Project Management)
@@ -248,7 +248,7 @@ Section numbers match `02-homepage.md`.
 
 **Visual separator between blocks:** 1px vertical divider in `border-subtle` between columns (desktop only). Adds clean structure without making each one look like an isolated card.
 
-**Optional product screenshot below the three blocks:** A unified product UI mockup spanning the full container width, framed with subtle browser chrome. This visually proves the product exists. If no screenshot is ready, **omit entirely** — don't fake it.
+**Optional product screenshot below the three blocks:** A unified product UI mockup spanning the full container width, framed with subtle browser chrome. This visually proves the product exists. If no screenshot is ready, **omit entirely**, don't fake it.
 
 ---
 
@@ -266,7 +266,7 @@ Section numbers match `02-homepage.md`.
   - H3 step title
   - 16px gap
   - Body, `text-secondary`
-- **Other column:** Visual — product screenshot, simple diagram, or stylized graphic
+- **Other column:** Visual, product screenshot, simple diagram, or stylized graphic
   - Frame in subtle browser chrome or floating panel (white bg, soft shadow)
   - Max width: 540px
   - If no asset ready: render an abstract illustration (geometric shapes representing the step) OR just leave column empty with vertical numbered marker
@@ -292,7 +292,7 @@ Section numbers match `02-homepage.md`.
 - Border radius: 12px
 - Padding: 32px
 - Centered content
-- **Stat number/phrase:** Display size (72px desktop), `button-primary` color (the dark green) — this is one of the few places the dark green appears as text, and it earns it
+- **Stat number/phrase:** Display size (72px desktop), `button-primary` color (the dark green), this is one of the few places the dark green appears as text, and it earns it
 - 12px gap
 - Stat label: H4, `text-primary`
 - 8px gap
@@ -307,7 +307,7 @@ Section numbers match `02-homepage.md`.
 - Centered icon in middle (optional): a small "↻" cycle glyph
 - Caption below loop: Body Small, italic, centered, `text-secondary`
 
-**Mobile:** Flywheel rotates to vertical — 4 stacked nodes connected by down-arrows, then a final up-arrow looping back.
+**Mobile:** Flywheel rotates to vertical, 4 stacked nodes connected by down-arrows, then a final up-arrow looping back.
 
 ---
 
@@ -338,14 +338,14 @@ Section numbers match `02-homepage.md`.
 - Independent Broker-Dealers: building / shield
 - Custodians: vault / pillar / bank
 
-Use Lucide or Phosphor — pick recognizable, conservative metaphors. Don't get cute.
+Use Lucide or Phosphor, pick recognizable, conservative metaphors. Don't get cute.
 
 ---
 
 ### §8. BEYOND TRANSITIONS
 
 **Layout:** `bg-secondary`.
-**Padding:** 100px (slightly reduced — this is a secondary section).
+**Padding:** 100px (slightly reduced, this is a secondary section).
 
 **Section header:** Left-aligned (departs from earlier sections). Eyebrow "AND BEYOND" → H2 → subhead.
 
@@ -353,7 +353,7 @@ Use Lucide or Phosphor — pick recognizable, conservative metaphors. Don't get 
 
 **Each card:**
 - White bg, 1px border, 12px radius
-- Padding: 40px (slightly larger — these are featured)
+- Padding: 40px (slightly larger, these are featured)
 - Top: icon (40px) OR small product screenshot thumbnail (240×140px, rounded)
 - 24px gap
 - H3 module name
@@ -369,9 +369,9 @@ Use Lucide or Phosphor — pick recognizable, conservative metaphors. Don't get 
 ### §9. INTEGRATIONS
 
 **Layout:** `bg-primary`.
-**Padding:** 80px (compressed — this is intentionally light).
+**Padding:** 80px (compressed, this is intentionally light).
 
-**Section header:** Left-aligned. H3 (smaller than other section headers — this is utility, not narrative). Body description below.
+**Section header:** Left-aligned. H3 (smaller than other section headers, this is utility, not narrative). Body description below.
 
 **Logo grid:** 4 columns × 2 rows = 8 logos. Single row of 6 also fine if fewer integrations.
 - Each logo cell: 1px border subtle, white bg, 16px padding
@@ -389,16 +389,16 @@ Use Lucide or Phosphor — pick recognizable, conservative metaphors. Don't get 
 
 **Section header:** Centered. H2.
 
-**Layout option A — Featured + grid (recommended):**
-- **Top:** Featured testimonial (Cana Wealth) full-width card, slightly larger type — H4 quote, name in H4 weight
+**Layout option A, Featured + grid (recommended):**
+- **Top:** Featured testimonial (Cana Wealth) full-width card, slightly larger type, H4 quote, name in H4 weight
 - **Below:** 2×2 or 1×3 grid of remaining testimonials in smaller cards
 
-**Layout option B — Carousel:**
+**Layout option B, Carousel:**
 - Single testimonial at a time, large
 - Arrow controls and dot indicators
 - Auto-rotate (optional)
 
-Recommend **option A** — gives Cana Wealth the prominence the testimonial deserves, and lets visitors scan the rest.
+Recommend **option A**, gives Cana Wealth the prominence the testimonial deserves, and lets visitors scan the rest.
 
 **Testimonial card structure:**
 - White bg, 1px border, 12px radius, 32px padding
@@ -430,13 +430,13 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 
 **Animation:** Smooth height transition, 200ms ease.
 
-**Default state:** All collapsed. (Some sites open the first one — but for B2B with 8 questions, all-collapsed is cleaner.)
+**Default state:** All collapsed. (Some sites open the first one, but for B2B with 8 questions, all-collapsed is cleaner.)
 
 ---
 
 ### §12. FINAL CTA
 
-**Layout:** `bg-tint` (subtle green tint) — this is the only section where the green wash earns its place.
+**Layout:** `bg-tint` (subtle green tint), this is the only section where the green wash earns its place.
 **Padding:** 120px.
 **Container:** narrower (max 900px), centered.
 
@@ -445,9 +445,9 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 2. 16px gap
 3. Subhead, Body Large, `text-secondary`
 4. 40px gap
-5. Primary CTA "Book a Demo" — slightly larger button (16px/32px padding)
+5. Primary CTA "Book a Demo", slightly larger button (16px/32px padding)
 6. 16px gap
-7. "Or email vineet@fasttrackr.ai" — Body Small, `text-secondary`
+7. "Send us a note via the contact form", Body Small, `text-secondary`
 
 **Optional decorative element:** Subtle abstract shape in `brand-green` at 10% opacity behind the CTA. Keep it minimal.
 
@@ -458,14 +458,14 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 **Layout:** Full-width, `bg-secondary` (lighter) OR `text-primary` background with white text (darker, more dramatic). **Recommend lighter version** for consistency with the rest of the light theme.
 **Padding:** 80px top, 32px bottom.
 
-**Top section — main grid:**
+**Top section, main grid:**
 - 5 columns on desktop: Brand block (wider, ~25%) + 4 nav columns (~18.75% each)
 - Brand block: logo + tagline (max 240px wide, Body Small `text-secondary`)
 - Nav columns: H4-style heading (weight 600, 14px, uppercase, `text-primary`) + list of links (Body Small, `text-secondary`, hover → `text-primary`)
 - Vertical gap between heading and first link: 16px
 - Vertical gap between links: 12px
 
-**Mid section — Advisor Ally Podcast block:**
+**Mid section, Advisor Ally Podcast block:**
 - 64px above and below
 - Centered or left-aligned card
 - Background: white, 1px border, 12px radius, 32px padding
@@ -488,10 +488,10 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 
 ## 3. Page Templates Beyond Homepage
 
-### Solutions / ICP / Other internal pages — shared template
+### Solutions / ICP / Other internal pages, shared template
 
 **Hero:** Smaller than homepage hero. Display → H1, max 2 lines, with single CTA. ~60vh max.
-**Sections:** Same visual rhythm as homepage — alternating `bg-primary` and `bg-secondary`, generous vertical padding, max 1280px container.
+**Sections:** Same visual rhythm as homepage, alternating `bg-primary` and `bg-secondary`, generous vertical padding, max 1280px container.
 **Sidebars:** None. Single-column flow.
 **Sticky elements:** Header only. Optional sticky CTA bar at bottom on mobile.
 
@@ -503,18 +503,18 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 - **Font loading:** Self-host Inter or Geist for performance. Avoid Google Fonts CDN for compliance reasons (some buyers have restrictive infosec policies).
 - **Animations:** Use sparingly. Hover lifts, fade-in on scroll for sections (subtle, 400ms), accordion transitions. **No parallax, no autoplay video, no scroll-jacking.**
 - **Accessibility:** Maintain 4.5:1 contrast minimum. All buttons keyboard-accessible. Focus states visible (use brand-green outline). Alt text on every image and icon.
-- **Performance:** Optimize images (WebP), lazy-load below-fold visuals, avoid heavy SVGs in flywheel — keep loop diagram simple.
+- **Performance:** Optimize images (WebP), lazy-load below-fold visuals, avoid heavy SVGs in flywheel, keep loop diagram simple.
 - **CMS notes:** Section toggles for Integrations (§9), with default = visible. Logo grids in §2 and §9 should be CMS-managed so the team can swap logos without dev support.
 
 ---
 
 ## 5. What to avoid (visual)
 
-- **No gradients** beyond optional 5% opacity hero accent. This is a conservative B2B audience — gradients read as consumer/startup.
+- **No gradients** beyond optional 5% opacity hero accent. This is a conservative B2B audience, gradients read as consumer/startup.
 - **No 3D illustrations** or character illustrations. The wealth management buyer doesn't connect with cartoon advisors.
 - **No emoji** anywhere on the site.
 - **No autoplay video.** If video is used (e.g., product demo), require click-to-play.
-- **No "AI" stock imagery** — neural networks, glowing brains, robot hands. The current site doesn't do this; the new site shouldn't either.
+- **No "AI" stock imagery**, neural networks, glowing brains, robot hands. The current site doesn't do this; the new site shouldn't either.
 - **No overly bright colors.** The brand green is bright in the logo but should feel like a quiet accent in the UI, not a wash.
 - **No more than one primary CTA per section.** Decision fatigue kills conversion.
 - **No carousels on mobile.** Stack vertically.
@@ -524,11 +524,11 @@ Recommend **option A** — gives Cana Wealth the prominence the testimonial dese
 
 ## 6. Decisions logged here that the team should confirm
 
-- [ ] Headline alignment — left-aligned hero (modern editorial) vs centered (current site) — recommend left-aligned
-- [ ] Footer background — light (`bg-secondary`) vs dark — recommend light for consistency
-- [ ] Flywheel visual — custom SVG vs simple text loop with arrow icons — recommend custom SVG
-- [ ] Hero visual element — typography only vs subtle product mockup — recommend typography only at launch
-- [ ] Testimonials layout — featured + grid (option A) vs carousel (option B) — recommend option A
-- [ ] Final CTA section background — `bg-tint` (subtle green) vs `bg-secondary` (off-white) — recommend `bg-tint`
+- [ ] Headline alignment, left-aligned hero (modern editorial) vs centered (current site), recommend left-aligned
+- [ ] Footer background, light (`bg-secondary`) vs dark, recommend light for consistency
+- [ ] Flywheel visual, custom SVG vs simple text loop with arrow icons, recommend custom SVG
+- [ ] Hero visual element, typography only vs subtle product mockup, recommend typography only at launch
+- [ ] Testimonials layout, featured + grid (option A) vs carousel (option B), recommend option A
+- [ ] Final CTA section background, `bg-tint` (subtle green) vs `bg-secondary` (off-white), recommend `bg-tint`
 
 If anything in this document conflicts with the actual brand guidelines from the FastTrackr design team, the brand guidelines win. This document is the starting point for designers who don't have those guidelines in hand.

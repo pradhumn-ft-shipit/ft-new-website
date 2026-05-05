@@ -1,4 +1,4 @@
-# FastTrackr AI — Website Structure
+# FastTrackr AI, Website Structure
 
 _Reference document. Use this to navigate the other copy files._
 
@@ -50,17 +50,17 @@ Header and footer copy lives in `02-homepage.md` (§0 and §13) since they apply
 
 ---
 
-## Homepage — section order
+## Homepage, section order
 
 §0. Header (sitewide)
 §1. Hero
-§2. Social proof bar — "Shaped by advisors and operators at"
-§3. The Problem — "If you've moved a book before, you know"
-§4. The Solution — "Built for transition. Not retrofitted with it."
-§5. How It Works — 4 steps
-§6. Outcomes — stat cards + emotional kicker + flywheel loop
-§7. Built for Every Player — 5 ICP cards
-§8. Beyond Transitions — Meeting Assistant + Document Intelligence
+§2. Social proof bar, "Shaped by advisors and operators at"
+§3. The Problem, "If you've moved a book before, you know"
+§4. The Solution, "Built for transition. Not retrofitted with it."
+§5. How It Works, 4 steps
+§6. Outcomes, stat cards + emotional kicker + flywheel loop
+§7. Built for Every Player, 5 ICP cards
+§8. Beyond Transitions, Meeting Assistant + Document Intelligence
 §9. Integrations
 §10. Testimonials
 §11. FAQs
@@ -71,7 +71,7 @@ Full copy in `02-homepage.md`. Visuals in `06-visuals.md`.
 
 ---
 
-## ICP Pages — shared template
+## ICP Pages, shared template
 
 Each "Who We Serve" page follows the same structure:
 
@@ -87,11 +87,11 @@ Full copy in `03-icp-pages.md`.
 
 ---
 
-## Other Pages — coverage
+## Other Pages, coverage
 
 `04-other-pages.md` includes:
 
-- Advisor Transitions (deep page — short version of homepage)
+- Advisor Transitions (deep page, short version of homepage)
 - Client Onboarding (new page)
 - Meeting Assistant (light refresh of existing)
 - Document Intelligence (light refresh of existing)
@@ -104,7 +104,7 @@ _Note: Security & Trust page was deprioritized. Privacy Policy serves as the pub
 
 ## Design / build notes (not copy, but worth flagging)
 
-- **Hero CTA:** Single primary CTA — "Book a Demo." Secondary text link "See how it works ↓" anchor-scrolls to How It Works.
+- **Hero CTA:** Single primary CTA, "Book a Demo." Secondary text link "See how it works ↓" anchor-scrolls to How It Works.
 - **Integrations section** can be hidden via CMS toggle if the team prefers.
 - **Advisor Ally podcast** block keeps its current placement near the footer.
 - **Try for Free** button on current site → swap to **Book a Demo** as the primary CTA (enterprise-led positioning). Self-serve sign-up can still live behind a smaller link in the footer or pricing page if needed.
