@@ -65,6 +65,12 @@ Lighthouse (mobile + desktop) before marking any page done. Static export wherev
 
 ---
 
+## Git identity
+
+This repo lives at `github.com/pradhumn-ft-shipit/ft-new-website`. **Always commit and push from this repo as `pradhumn@fasttrackr.ai` (user `pradhumn-ft-shipit`).** Repo-local `.git/config` has `user.email`, `user.name`, and an authenticated `origin` URL set, so `git push` should just work without prompting. If a push prompts for credentials or fails with a 403 referring to a different account, the local config has been wiped, do not push from a different identity, fix the config first.
+
+---
+
 ## Guardrails
 
 - **Copy is sacred.** Pull from `/guideline-copy`. Don't rewrite, paraphrase, or invent.
