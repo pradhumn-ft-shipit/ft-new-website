@@ -4,6 +4,12 @@ import Icon from "../svg/Icon.astro";
 
 const cards = [
   {
+    icon: "users" as const,
+    title: "Client Onboarding",
+    href: "/solutions/client-onboarding",
+    body: "The same engine that moves thousands of accounts during a transition, applied to every new client. Onboard in days, not weeks.",
+  },
+  {
     icon: "mic" as const,
     title: "Meeting Assistant",
     href: "/solutions/meeting-assistant",
@@ -30,7 +36,7 @@ const cards = [
     </p>
   </div>
 
-  <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
     {
       cards.map((c) => (
         <a

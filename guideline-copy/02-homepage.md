@@ -35,17 +35,11 @@ _All sections in order. Copywriter notes are in italics where helpful._
 
 ## §1. HERO
 
-**Headline (option A, recommended):**
-Advisor transitions, finally built right.
-
-**Headline (option B):**
+**Headline:**
 Move advisor books in weeks, not months.
 
-**Headline (option C):**
-The AI transition engine for wealth management.
-
 **Subhead:**
-Purpose-built AI for advisor transitions, shaped by consultants, operators, and RIA founders who move billions in client assets every year.
+Purpose-built for advisor transitions and shaped by consultants, operators, and RIA founders who move billions in client assets every year.
 
 **Primary CTA:** Book a Demo
 **Secondary link (text-only, smaller):** See how it works ↓ _(anchor-scrolls to §5 How It Works)_
@@ -75,16 +69,16 @@ Repapering hasn't changed in decades. Advisors and their teams just learned to l
 Months of repapering before the last asset transfers. Revenue paused. Client relationships in limbo.
 
 **Hundreds of forms. Per book.**
-Account applications, transfer-of-asset forms, feature forms, multiplied by every household. Then multiplied again on rejection.
+Account applications, transfer-of-asset forms, services and firm paperwork, multiplied by every household.
 
 **Tracked in spreadsheets.**
-Hundreds of accounts. Ops teams chasing status across emails, PDFs, and tabs. One mis-keyed cell and the picture changes.
+Hundreds of accounts. Ops teams chasing status and inputs across emails, PDFs, and calls. One mis-keyed cell and the picture changes.
 
 **Burned-out teams.**
 Transition season is overtime season. Mistakes pile up. So does the resentment.
 
-**NIGOs and rework.**
-One missing field sends a form back. Multiply that by hundreds.
+**NIGO means rework.**
+Even one missing field can lead to a rejection. Multiply that by hundreds.
 
 **Anxious clients.**
 They notice when the move feels disorganized. Some quietly walk.
@@ -97,20 +91,20 @@ They notice when the move feels disorganized. Some quietly walk.
 Built for transition. Not retrofitted with it.
 
 **Body:**
-FastTrackr is shaped by transition consultants, ops leaders, and RIA founders who've moved billions in client assets, and we've encoded what they know into a system that handles the work, the quirks, and the edge cases that others miss.
+FastTrackr is shaped by advisory practices, transition consultants, and operators who've moved billions in client assets. We've encoded what they know and their best practices into a system that handles the work, the quirks, and the edge cases that others miss.
 
 **Bold callout:** Every transition is different. We get that. The system flexes around your book, not the other way around.
 
 **Three capability blocks:**
 
 **Data Collection**
-AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review, without another intake form.
+AI extracts client and account data from existing sources of information (systems, docs, conversations). Pre-populated household records, ready for review, without another long blank intake form.
 
 **Documentation**
-Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. Or pushed directly to their systems. No more manual cross-referencing.
+Smart mapping across end custodians and firms. The right documents identified, pre-filled, and ready for signature. Push to the custodian via API where supported, or generate signature-ready documents.
 
 **Project Management**
-Hundreds of households, every form, every status, visible in one place. No more spreadsheets, no more blind handoffs.
+Hundreds of households, tracked and proactively managed in one place. Replaces the Excel war room. Visible to you, your team, and your clients.
 
 ---
 
@@ -144,7 +138,7 @@ What changes when transitions stop being chaos.
 **Stat cards (4):**
 
 **75% faster**
-Less admin. More books moved per quarter.
+Less admin work, more revenues. More books moved per quarter.
 
 **Months → Weeks**
 The 90-day timeline gets cut down dramatically.
@@ -152,7 +146,7 @@ The 90-day timeline gets cut down dramatically.
 **Fewer NIGOs**
 Pre-validated, mapped forms. Cleaner submissions.
 
-**Retained AUM**
+**Higher AUM Retained**
 Faster close means less attrition during the move.
 
 **Soft kicker (below the stats):**
@@ -161,7 +155,7 @@ And what doesn't show up in the numbers, calmer advisors, clients who barely not
 **Flywheel loop visual (described for designer):**
 A simple 4-node loop showing:
 
-> Faster transition → Better client experience → Retained AUM → Smoother next transition → _(loops)_
+> Faster transition → Better client experience → Retained AUM → No ops-team burnout → _(loops)_
 
 Caption under the loop: _Every transition makes the next one easier. The system learns. So does your team._
 
@@ -207,7 +201,11 @@ From moving the book to running the practice.
 **Subhead:**
 FastTrackr stays with you after the transition. The same AI engine that moved your book keeps your day-to-day operations running.
 
-**Cards (2):**
+**Cards (3):**
+
+**Client Onboarding**
+The same engine that moves thousands of accounts during a transition, applied to every new client. Onboard in days, not weeks.
+_Learn more →_
 
 **Meeting Assistant**
 Pre-meeting prep, in-meeting notes, post-meeting follow-ups. CRM updated in one click. Built for advisors who'd rather talk to clients than write up calls.

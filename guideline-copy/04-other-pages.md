@@ -286,44 +286,30 @@ We don't sell seats by the dozen and hope you fit. Pricing flexes to what you're
 
 ---
 
-## Advisor Transitions
+## Advisor Transitions _(full-width, row 1)_
 
-We price based on the time we save you and the additional revenue we help you capture.
+**Title:** Priced to your scope, not a seat count.
 
-Every firm's transition volume is different. Every consultant's deal flow is different. So is what's at stake, AUM in transit, recruiting positioning, integration timelines.
+Every firm's transition requirements and volume is different. We work with you to understand where FastTrackr can best support your transition, and to reflect scope and usage so you don't pay for anything you don't use.
 
-We work with you to structure pricing that ties to those outcomes.
-
-**Talk to us** to walk through what fits your firm.
-
-[CTA: Book a Pricing Call]
+[CTA: Book an Exploratory Call]
 
 ---
 
-## Meeting Assistant
+## Other modules _(row 2, three cards side by side)_
 
-Per-seat pricing. Designed for advisors and small teams who want to start saving time on meeting prep, note-taking, and follow-ups.
+**Section heading:** Industry-best pricing on every module. Talk to us separately.
 
-[CTA: See Plans]
+**Meeting Assistant**
+Per-seat, free tier to start. For advisors and teams who want meeting prep, notes, and follow-ups handled. Start free, scale up as your team grows.
+[CTA: Talk to Us]
 
-_[Existing pricing tiers retained from current site, displayed here.]_
+**Document Intelligence**
+Per-seat, pay for what you use. For advisors and teams turning brokerage statements, tax docs, and equity comp into clean, structured data. Free tier to start.
+[CTA: Talk to Us]
 
----
-
-## Document Intelligence
-
-Per-seat pricing. Designed for advisors and teams who want faster document review and cleaner data into their stack.
-
-[CTA: See Plans]
-
-_[Existing pricing tiers retained from current site, displayed here.]_
-
----
-
-## Client Onboarding
-
-Per-seat pricing for advisors. Custom pricing for firms running onboarding at volume.
-
+**Client Onboarding**
+Per-seat for advisors. Custom for firms. For advisors onboarding new clients faster, and firms running onboarding at volume. Pricing flexes to either.
 [CTA: Talk to Us]
 
 ---
