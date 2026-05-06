@@ -37,7 +37,7 @@ You hire more ops people. The work scales. Your margin doesn't.
 
 We become the operating layer underneath every deal you take on.
 
-**Data collection runs in the background.** AI pulls client and account data from documents, transcripts, and conversations. Your team reviews, they don't transcribe.
+**Data collection runs in the background.** AI extracts client and account data from existing sources of information (systems, docs, conversations). Your team reviews, they don't transcribe.
 
 **Forms are pre-filled, mapped, and validated.** Across Fidelity, Schwab, and the firms you work with most. NIGOs drop. Rework drops with them.
 
@@ -112,7 +112,7 @@ You've built the relationships. You've made the call. You're going independent, 
 
 Then you discover what repapering actually looks like.
 
-Ninety days. Hundreds of forms. Account applications, transfer-of-asset forms, feature forms, for every household, sometimes for every account. Your assistant is buried. Your weekends are gone. Some clients drift in the silence between "we're moving" and "we're done." A few don't come with you.
+Ninety days. Hundreds of forms. Account applications, transfer-of-asset forms, services and firm paperwork, for every household, sometimes for every account. Your assistant is buried. Your weekends are gone. Some clients drift in the silence between "we're moving" and "we're done." A few don't come with you.
 
 The transition isn't the part anyone tells you about when they sell you on independence. It's the part that almost makes you reconsider.
 

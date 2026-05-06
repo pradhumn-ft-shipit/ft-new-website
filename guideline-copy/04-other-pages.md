@@ -27,7 +27,7 @@ Move advisor books in weeks, not months. Purpose-built for advisor transitions a
 
 Repapering hasn't been redesigned in decades.
 
-A typical transition takes 90 days. Some take longer. Each household generates dozens of forms, account applications, transfer-of-asset forms, feature forms, multiplied across every account in the book. Tracked in spreadsheets. Chased across email threads. One missing field sends a form back, and the cycle resets.
+A typical transition takes 90 days. Some take longer. Each household generates dozens of forms, account applications, transfer-of-asset forms, services and firm paperwork, multiplied across every account in the book. Tracked in spreadsheets. Chased across email threads. Even one missing field can lead to a rejection, and the cycle resets.
 
 For the advisor, it's months of operational work that has nothing to do with why they got into the business. For the team, it's overtime season. For clients, it's a stretch of silence that some don't wait through.
 
@@ -37,11 +37,11 @@ The industry loses an estimated $19B in client assets every year to transitions 
 
 ## What FastTrackr does
 
-**Data Collection.** AI extracts client and account data from documents, transcripts, and conversations. Pre-populated household records, ready for review, without another intake form.
+**Data Collection.** AI extracts client and account data from existing sources of information (systems, docs, conversations). Pre-populated household records, ready for review, without another long blank intake form.
 
-**Documentation.** Smart mapping across custodians and firms. The right forms identified, pre-filled, and ready for signature. Push to the custodian via API where supported, or generate signature-ready documents.
+**Documentation.** Smart mapping across end custodians and firms. The right documents identified, pre-filled, and ready for signature. Push to the custodian via API where supported, or generate signature-ready documents.
 
-**Project Management.** Hundreds of households, every form, every status, in one place. Replaces the Excel war room. Visible to you, your team, and your clients.
+**Project Management.** Hundreds of households, tracked and proactively managed in one place. Replaces the Excel war room. Visible to you, your team, and your clients.
 
 ---
 
