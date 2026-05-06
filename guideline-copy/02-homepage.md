@@ -36,10 +36,10 @@ _All sections in order. Copywriter notes are in italics where helpful._
 ## §1. HERO
 
 **Headline:**
-Move advisor books in weeks, not months.
+Advisor transitions, finally built right.
 
 **Subhead:**
-Purpose-built for advisor transitions and shaped by consultants, operators, and RIA founders who move billions in client assets every year.
+Move advisor books in weeks, not months. Purpose-built for advisor transitions and shaped by consultants, operators, and RIA founders who move billions in client assets every year.
 
 **Primary CTA:** Book a Demo
 **Secondary link (text-only, smaller):** See how it works ↓ _(anchor-scrolls to §5 How It Works)_
